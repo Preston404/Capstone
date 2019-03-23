@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Mar 22 20:20:27 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : xlr8_16MHz
+Top-level Entity Name : xlr8_alorium_top
+Family : MAX 10
+Total logic elements : 6,853
+    Total combinational functions : 6,237
+    Dedicated logic registers : 2,540
+Total registers : 2540
+Total pins : 45
+Total virtual pins : 0
+Total memory bits : 280,576
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 1
+UFM blocks : 1
+ADC blocks : 1

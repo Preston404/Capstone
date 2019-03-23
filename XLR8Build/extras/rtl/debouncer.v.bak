@@ -1,0 +1,12 @@
+
+
+
+module debouncer(
+
+input in_signal,
+output out_signal,
+
+
+parameter debounce_cc
+
+);

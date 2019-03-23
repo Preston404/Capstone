@@ -1,0 +1,209 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_virtual'
+Slack : 0.505
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : 1.088
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_scki'
+Slack : 1.567
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'int_osc_clk'
+Slack : 6.141
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_scki'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'int_osc_clk'
+Slack : 0.474
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_virtual'
+Slack : 57.012
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_scki'
+Slack : 6.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'Clock'
+Slack : 27.138
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Clock'
+Slack : 1.010
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk_scki'
+Slack : 3.690
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'int_osc_clk'
+Slack : 4.088
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : 28.983
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_scki'
+Slack : 30.938
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uc_top_wrp_vlog_inst|flashload_inst|flash_inst|onchip_flash_0|altera_onchip_flash_block|ufm_block|osc'
+Slack : 90.684
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clocks_inst|pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 244.781
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_virtual'
+Slack : 1.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : 1.825
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_scki'
+Slack : 2.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'int_osc_clk'
+Slack : 6.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_scki'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'int_osc_clk'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_virtual'
+Slack : 56.413
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_scki'
+Slack : 6.791
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'Clock'
+Slack : 27.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Clock'
+Slack : 0.928
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk_scki'
+Slack : 3.258
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'int_osc_clk'
+Slack : 4.081
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : 28.769
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_scki'
+Slack : 30.870
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uc_top_wrp_vlog_inst|flashload_inst|flash_inst|onchip_flash_0|altera_onchip_flash_block|ufm_block|osc'
+Slack : 90.680
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clocks_inst|pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 244.884
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : 5.113
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_virtual'
+Slack : 5.783
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_scki'
+Slack : 6.606
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'int_osc_clk'
+Slack : 7.676
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.065
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_scki'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'int_osc_clk'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_virtual'
+Slack : 53.366
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_scki'
+Slack : 9.247
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Clock'
+Slack : 29.504
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Clock'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk_scki'
+Slack : 1.205
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'int_osc_clk'
+Slack : 4.081
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : 28.639
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_scki'
+Slack : 30.948
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uc_top_wrp_vlog_inst|flashload_inst|flash_inst|onchip_flash_0|altera_onchip_flash_block|ufm_block|osc'
+Slack : 90.680
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clocks_inst|pll_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 244.902
+TNS   : 0.000
+
+------------------------------------------------------------
