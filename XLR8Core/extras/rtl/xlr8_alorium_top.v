@@ -100,12 +100,12 @@ module xlr8_alorium_top
     inout       SOIC1,  // A0 in the case of an 24AA128SM EEPROM
     // JTAG connector reused as digial IO. On that connector, pin 4 is power, pins 2&10 are ground
     //   and pin 8 selects between gpio (low) and jtag (high) modes and has a pulldown.
-    inout       JT9, // external pullup. JTAG function is TDI
-    inout       JT7, // no JTAG function
-    inout       JT6, // no JTAG function
-    inout       JT5, // external pullup. JTAG function is TMS
-    inout       JT3, // JTAG function TDO
-    inout       JT1, // external pulldown, JTAG function is TCK
+//  inout       JT9, // external pullup. JTAG function is TDI
+//  inout       JT7, // no JTAG function
+//  inout       JT6, // no JTAG function
+//  inout       JT5, // external pullup. JTAG function is TMS
+//  inout       JT3, // JTAG function TDO
+//  inout       JT1, // external pulldown, JTAG function is TCK
     //Clock and Reset
     input       Clock, // 16MHz
     input       RESET_N

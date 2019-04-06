@@ -65,4 +65,206 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name QIP_FILE my_ROM.qip
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|clk" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|current_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|current_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|current_state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|current_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|current_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|current_state[2]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|enable" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|feedback_1" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|feedback_2" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|feedback_3" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|long_hb" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|new_seed" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_output" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_val_rdy" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|enable" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|feedback_1" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|feedback_2" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|feedback_3" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|long_hb" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|new_seed" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_compare[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|pwm_output" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_cnt[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_state[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_state[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|startup_state[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_pwm[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|sw_val_rdy" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|time_to_wait[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|us_clk_reg[3]" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=69" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=69" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=69" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=232" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=2048" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=2048" -section_id auto_signaltap_0
+set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
