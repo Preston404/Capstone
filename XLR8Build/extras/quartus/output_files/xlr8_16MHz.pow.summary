@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Fri Mar 22 20:21:09 2019
+Power Analyzer Status : Successful - Wed May 01 20:18:00 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : xlr8_16MHz
 Top-level Entity Name : xlr8_alorium_top
 Family : MAX 10
 Device : 10M08SAU169C8G
 Power Models : Final
-Total Thermal Power Dissipation : 252.47 mW
-Core Dynamic Thermal Power Dissipation : 85.11 mW
+Total Thermal Power Dissipation : 252.26 mW
+Core Dynamic Thermal Power Dissipation : 84.71 mW
 Core Static Thermal Power Dissipation : 123.86 mW
-I/O Thermal Power Dissipation : 43.50 mW
+I/O Thermal Power Dissipation : 43.69 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

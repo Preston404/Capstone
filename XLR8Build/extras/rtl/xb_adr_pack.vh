@@ -34,9 +34,10 @@
 // Copyright 2017, Superion Technology Group. All Rights Reserved
 //----------------------------------------------------------------------
 
-localparam LFSR_CTRL_Address = 8'he0;
-localparam LFSR_SEED_Address = 8'he1;
-localparam LFSR_DATA_Address = 8'he2;
+//localparam LFSR_CTRL_Address = 8'he0;
+//localparam LFSR_SEED_Address = 8'he1;
+//localparam LFSR_DATA_Address = 8'he2;
+localparam ESC_PWM_Address = 8'he1;
 
 //
 //----------------------------------------------------------------------

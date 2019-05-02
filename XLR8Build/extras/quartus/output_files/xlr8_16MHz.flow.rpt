@@ -1,5 +1,5 @@
 Flow report for xlr8_16MHz
-Fri Mar 22 20:21:19 2019
+Wed May 01 20:18:10 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 22 20:21:19 2019       ;
+; Flow Status                        ; Successful - Wed May 01 20:18:10 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; xlr8_16MHz                                  ;
 ; Top-level Entity Name              ; xlr8_alorium_top                            ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08SAU169C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6,542 / 8,064 ( 81 % )                      ;
-;     Total combinational functions  ; 6,242 / 8,064 ( 77 % )                      ;
-;     Dedicated logic registers      ; 2,522 / 8,064 ( 31 % )                      ;
-; Total registers                    ; 2522                                        ;
+; Total logic elements               ; 6,507 / 8,064 ( 81 % )                      ;
+;     Total combinational functions  ; 6,181 / 8,064 ( 77 % )                      ;
+;     Dedicated logic registers      ; 2,534 / 8,064 ( 31 % )                      ;
+; Total registers                    ; 2534                                        ;
 ; Total pins                         ; 45 / 130 ( 35 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 280,576 / 387,072 ( 72 % )                  ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/22/2019 20:20:17 ;
+; Start date & time ; 05/01/2019 20:17:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; xlr8_16MHz          ;
 +-------------------+---------------------+
@@ -77,7 +77,8 @@ refer to the applicable agreement for further details.
 +--------------------------------------+------------------------------------------------------------------------------------------+---------------+------------------+----------------+
 ; Assignment Name                      ; Value                                                                                    ; Default Value ; Entity Name      ; Section Id     ;
 +--------------------------------------+------------------------------------------------------------------------------------------+---------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 105852885275517.155331121616020                                                          ; --            ; --               ; --             ;
+; ALLOW_REGISTER_RETIMING              ; Off                                                                                      ; On            ; --               ; --             ;
+; COMPILER_SIGNATURE_ID                ; 105852885275517.155676702915992                                                          ; --            ; --               ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                       ; --            ; --               ; xlr8_tb        ;
 ; EDA_EXTRA_ELAB_OPTION                ; modelsim=-sv_lib ../../../../../XLR8Core/extras/modelsim_windows/uc_top_wrap_64          ; --            ; --               ; eda_simulation ;
 ; EDA_MAINTAIN_DESIGN_HIERARCHY        ; On                                                                                       ; --            ; --               ; eda_simulation ;
@@ -93,6 +94,7 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; xlr8_tb                                                                                  ; --            ; --               ; xlr8_tb        ;
 ; EDA_TEST_BENCH_NAME                  ; xlr8_tb                                                                                  ; --            ; --               ; eda_simulation ;
 ; EDA_TIME_SCALE                       ; 1 ps                                                                                     ; --            ; --               ; eda_simulation ;
+; FLOW_ENABLE_POWER_ANALYZER           ; On                                                                                       ; Off           ; --               ; --             ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                                                                       ; --            ; --               ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                                                                        ; --            ; --               ; --             ;
 ; MISC_FILE                            ; ../../../XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/../int_osc.cmp                 ; --            ; --               ; --             ;
@@ -132,6 +134,7 @@ refer to the applicable agreement for further details.
 ; VCCA_USER_VOLTAGE                    ; 3.3V                                                                                     ; --            ; --               ; --             ;
 ; VERILOG_INPUT_VERSION                ; SystemVerilog_2005                                                                       ; Verilog_2001  ; --               ; --             ;
 ; VERILOG_SHOW_LMF_MAPPING_MESSAGES    ; Off                                                                                      ; --            ; --               ; --             ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES       ; Off                                                                                      ; --            ; --               ; --             ;
 +--------------------------------------+------------------------------------------------------------------------------------------+---------------+------------------+----------------+
 
 
@@ -140,13 +143,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4832 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:31     ; 1.4                     ; 5696 MB             ; 00:00:57                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4716 MB             ; 00:00:01                           ;
-; Power Analyzer       ; 00:00:06     ; 2.0                     ; 4911 MB             ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:06     ; 2.1                     ; 4891 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4762 MB             ; 00:00:02                           ;
-; Total                ; 00:00:57     ; --                      ; --                  ; 00:01:42                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4835 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:29     ; 1.5                     ; 5695 MB             ; 00:00:56                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:05     ; 2.0                     ; 4912 MB             ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:06     ; 2.2                     ; 4890 MB             ; 00:00:11                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4763 MB             ; 00:00:02                           ;
+; Total                ; 00:00:54     ; --                      ; --                  ; 00:01:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -13,8 +13,9 @@
     //     1'b0   //   [0]   - FPGA Image,  0 = CFM Application, 1 = CFM Factory
     //     },
     
-    parameter NUM_PINS = 20,// Default is Arduino Uno Digital 0-13 + Analog 0-5
-    // NUM_PINS should be 20 for the XLR8 board, ?? for the Sno board
+    //parameter NUM_PINS = 20,// Default is Arduino Uno Digital 0-13 + Analog 0-5
+	parameter NUM_PINS = 38,
+    // NUM_PINS should be 20 for the XLR8 board, 38 for the Sno board
     
     parameter OX8ICR_Address = 8'h31,
     parameter OX8IFR_Address = 8'h32,

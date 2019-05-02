@@ -20,8 +20,8 @@
 # Set paths to specifc source files as need here
 
 # Load settings file specific to this OpenXLR8 module
-set_global_assignment -name VERILOG_FILE ../../../XLR8Build/extras/rtl/alorium_lfsr.v
-set_global_assignment -name VERILOG_FILE ../../../XLR8Build/extras/rtl/xlr8_lfsr.v
+set_global_assignment -name VERILOG_FILE ../../../XLR8Build/extras/rtl/alorium_esc.v
+set_global_assignment -name VERILOG_FILE ../../../XLR8Build/extras/rtl/xlr8_esc.v
 
 
 #==============================================================================

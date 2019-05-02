@@ -11,19 +11,22 @@
  The device only works with 5V from the arduino
 */
 
-module alorium_lfsr
+module alorium_esc
   (
    // Clock and Reset
    input clk,
    input reset_n,
    // Inputs
-   input new_seed,
-   input enable,
-   input wire [7:0] seed,
-   input long_hb,
+   //input new_seed,
+   //input enable,
+   //input wire [7:0] seed,
+   //input long_hb,
    // Output
-   output reg heartbeat,
-   output reg [7:0] lfsr_data,
+   //output reg heartbeat,
+   //output reg [7:0] lfsr_data,
+	
+	input wire[7:0] esc_pwm,
+	input new_pwm,
 	
 	// IC Drivers
 	output                    IN_1,
@@ -34,9 +37,12 @@ module alorium_lfsr
 	output                    SD_3,
 	
 	// Feedback Sensors
-	input reg                 feedback_1,
-	input reg                 feedback_2,
-	input reg                 feedback_3
+	input                 feedback_1,
+	input                 feedback_2,
+	input                 feedback_3,
+	
+	output sync,
+	output sync2
 	
 	
   );
@@ -48,26 +54,26 @@ module alorium_lfsr
 	reg sw_val_rdy;  
   
    // Random LFSR stuff from example project
-   reg [29:0] hb_cnt;
+   //reg [29:0] hb_cnt;
 	
-   assign feedback = ~(lfsr_data[7] ^ lfsr_data[5] ^ 
-                       lfsr_data[4] ^ lfsr_data[3]);
+   //assign feedback = ~(lfsr_data[7] ^ lfsr_data[5] ^ 
+   //                    lfsr_data[4] ^ lfsr_data[3]);
    
    always @(posedge clk) begin
 
       if (!reset_n) begin
-         heartbeat <= 0;
+         //heartbeat <= 0;
          //hb_cnt <= 0;
          // LFSR register cannot be all 1's for XNOR LFSR
-	      lfsr_data <= 8'h01;
+	      //lfsr_data <= 8'h01;
 			sw_val_rdy <= 1'b0;
 			sw_pwm <= 8'b00000000;
       end
-      else if (new_seed) begin
+      else if (new_pwm) begin
          // LFSR register cannot be all 1's for XNOR LFSR
-         lfsr_data <= &seed ? 8'h01 : seed;
+         //lfsr_data <= &seed ? 8'h01 : seed;
          //hb_cnt <= hb_cnt + 1;
-			sw_pwm <= seed;
+			sw_pwm <= esc_pwm;
 			sw_val_rdy <= 1'b1;
       end
 /*
@@ -97,7 +103,25 @@ module alorium_lfsr
    // SD_X is enable/disable
    reg[2:0] current_state = 3'b000;
 	
+	assign sync2 = f1_db;
+	assign sync = f3_db;
+	
+	
 	always @(posedge clk) begin
+		 
+		 f1_db_reg <= f1_db;
+		 f2_db_reg <= f2_db;
+		 f3_db_reg <= f3_db;
+		 
+	
+	    if(current_state == 3'b000) begin
+		     //sync <= 1'b1;
+		 end
+		 else begin
+		     //sync <= 1'b0;
+		 end
+	
+	
 	    if(current_state == 3'b000) begin        // Source 1, Sink 2
 		     SD_1 <= pwm_output;
 			  IN_1 <= HIGH;
@@ -105,8 +129,8 @@ module alorium_lfsr
 			  IN_2 <= LOW;
 			  SD_3 <= LOW;
 			  IN_3 <= LOW;
-			  if(f3_db == HIGH & ~startup) begin
-			      current_state <= current_state + 1;
+			  if((f3_db != f3_db_reg) & ~startup) begin
+			      current_state <= current_state + 3'b001;
 			  end
 			  else if(startup) begin
 			      current_state <= startup_state;
@@ -119,22 +143,22 @@ module alorium_lfsr
 			  IN_2 <= LOW;
 			  SD_3 <= HIGH;
 			  IN_3 <= LOW;
-			  if(f2_db == HIGH & ~startup) begin
-			      current_state <= current_state + 1;
+			  if((f2_db != f2_db_reg) & ~startup) begin
+			      current_state <= current_state + 3'b001;
 			  end
 			  else if(startup) begin
 			      current_state <= startup_state;
 		     end
 		 end
 		 else if (current_state == 3'b010) begin  // Source 2, Sink 3
-		     SD_1 <= 1'b0;
-			  IN_1 <= 1'b0;
+		     SD_1 <= LOW;
+			  IN_1 <= LOW;
 			  SD_2 <= pwm_output;
 			  IN_2 <= HIGH;
 			  SD_3 <= HIGH;
 			  IN_3 <= LOW;
-			  if(f1_db == HIGH & ~startup) begin
-			      current_state <= current_state + 1;
+			  if((f1_db != f1_db_reg) & ~startup) begin
+			      current_state <= current_state + 3'b001;
 			  end
 			  else if(startup) begin
 			      current_state <= startup_state;
@@ -147,8 +171,8 @@ module alorium_lfsr
 			  IN_2 <= HIGH;
 			  SD_3 <= LOW;
 			  IN_3 <= LOW;
-			  if(f3_db == HIGH & ~startup) begin
-			      current_state <= current_state + 1;
+			  if((f3_db != f3_db_reg) & ~startup) begin
+			      current_state <= current_state + 3'b001;
 			  end
 			  else if(startup) begin
 			      current_state <= startup_state;
@@ -161,8 +185,8 @@ module alorium_lfsr
 			  IN_2 <= LOW;
 			  SD_3 <= pwm_output;
 			  IN_3 <= HIGH;
-			  if(f2_db == HIGH & ~startup) begin
-			      current_state <= current_state + 1;
+			  if((f2_db != f2_db_reg) & ~startup) begin
+			      current_state <= current_state + 3'b001;
 			  end
 			  else if(startup) begin
 			      current_state <= startup_state;
@@ -175,7 +199,7 @@ module alorium_lfsr
 			  IN_2 <= LOW;
 			  SD_3 <= pwm_output;
 			  IN_3 <= HIGH;
-			  if(f1_db == HIGH & ~startup) begin
+			  if((f1_db != f1_db_reg) & ~startup) begin
 			      current_state <= 3'b000;
 			  end
 			  else if(startup) begin
@@ -191,36 +215,47 @@ module alorium_lfsr
 	reg[12:0] startup_cnt;
 	reg[2:0]  startup_state;
 	reg[12:0] time_to_wait;
-	//reg[6:0] min_time = 7'b1100100;
-	//reg[4:0] min_step = 5'b10100;
-	parameter min_time = 10;
-	parameter min_step = 5;
+	reg[6:0] min_time = 7'b0110010; // 50
+	reg[4:0] min_step = 5'b00101;   // 5
+	//parameter min_time = 50;
+	//parameter min_step = 5;
 	
 	
 	always @(posedge us_clk) begin
 	    if(!reset_n) begin
 		     startup_cnt <= 13'b1001110001000; // 5000
 			  startup <= 1'b1;
-			  pwm_compare <= 8'b00011001; // 25
+			  //pwm_compare <= 8'b00011001; // 25
+			  pwm_compare <= 8'b00101000; // 40
 			  time_to_wait <= 13'b1001110001000; // 5000
 			  startup_state = 3'b000;
 		 end
-		 else if (sw_val_rdy) begin
-		     pwm_compare <= sw_pwm;
+		 //else if (sw_val_rdy) begin
+		     //pwm_compare <= sw_pwm;
 			  //pwm_compare <= 8'b01001011;
-		 end
+		 //end
 		 else begin
+		    if (sw_val_rdy) begin
+		        pwm_compare <= sw_pwm;
+			     //pwm_compare <= 8'b01001011;
+		    end
 			 if(startup_cnt > min_time + min_step && startup == 1'b1) begin 
 				  // Check for end of wait period
 				  if(time_to_wait == 13'b0000000000000) begin
-						time_to_wait <= startup_cnt - min_step; 
-						startup_cnt <= startup_cnt - min_step; 
-						// Go to next state
-						if(startup_state != 5) begin
-							 startup_state <= startup_state + 1; 
-						end
+						time_to_wait <= startup_cnt - min_step;
+						if(startup_cnt > 13'b0001000000000)	begin // 1000
+						    startup_cnt <= startup_cnt - min_step; 
+					   end
 						else begin
-							 startup_state <= 0;
+						    //pwm_compare <= 8'b00110010; // 50
+							 //startup <= 1'b0;
+						end
+						// Go to next state
+						if(startup_state != 3'b101) begin
+							 startup_state <= startup_state + 3'b001;
+						end 
+						else begin
+							 startup_state <= 3'b000;
 						end
 				  end
 				  else begin
@@ -228,9 +263,9 @@ module alorium_lfsr
 				  end
 			 end
 			 else begin
-				  startup <= 1'b0;
+				  //startup <= 1'b0;
 				  if (pwm_compare < 8'b00110010) begin
-				      pwm_compare <= 8'b00110010; // 50;
+				      //pwm_compare <= 8'b00110010; // 50;
 				  end 
 			 end	
 		 end 
@@ -282,24 +317,30 @@ module alorium_lfsr
 	wire f2_db;
 	wire f3_db;
 	
+	reg f1_db_reg;
+	reg f2_db_reg;
+	reg f3_db_reg;
+	
+	
 	debouncer f1(
-		 .clk(clk),
+		 .clk(us_clk),
 		 .in_signal(feedback_1),
 		 .out_signal(f1_db)
 	);
 	
 	debouncer f2(
-		 .clk(clk),
+		 .clk(us_clk),
 		 .in_signal(feedback_2),
 		 .out_signal(f2_db)
 	);
 	
+	
 	debouncer f3(
-		 .clk(clk),
+		 .clk(us_clk),
 		 .in_signal(feedback_3),
 		 .out_signal(f3_db)
 	);
-
+   
 	
 	/*
 	// Measure the speed of rotation

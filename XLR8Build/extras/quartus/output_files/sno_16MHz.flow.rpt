@@ -1,5 +1,5 @@
 Flow report for sno_16MHz
-Thu Jan 31 20:28:08 2019
+Mon Apr 22 19:53:39 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jan 31 20:28:08 2019       ;
+; Flow Status                        ; Successful - Mon Apr 22 19:53:39 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; sno_16MHz                                   ;
 ; Top-level Entity Name              ; xlr8_alorium_top                            ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M16SAU169C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6,890 / 15,840 ( 43 % )                     ;
-;     Total combinational functions  ; 6,486 / 15,840 ( 41 % )                     ;
-;     Dedicated logic registers      ; 2,820 / 15,840 ( 18 % )                     ;
-; Total registers                    ; 2820                                        ;
+; Total logic elements               ; 6,869 / 15,840 ( 43 % )                     ;
+;     Total combinational functions  ; 6,444 / 15,840 ( 41 % )                     ;
+;     Dedicated logic registers      ; 2,837 / 15,840 ( 18 % )                     ;
+; Total registers                    ; 2837                                        ;
 ; Total pins                         ; 65 / 130 ( 50 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 280,320 / 562,176 ( 50 % )                  ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/31/2019 20:27:02 ;
+; Start date & time ; 04/22/2019 19:52:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; sno_16MHz           ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+------------------------------------------------------------------------------------------+---------------+------------------+----------------+
 ; Assignment Name                      ; Value                                                                                    ; Default Value ; Entity Name      ; Section Id     ;
 +--------------------------------------+------------------------------------------------------------------------------------------+---------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 105852885275517.154899522204520                                                          ; --            ; --               ; --             ;
+; COMPILER_SIGNATURE_ID                ; 105852885275517.155598795407508                                                          ; --            ; --               ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                                                       ; --            ; --               ; xlr8_tb        ;
 ; EDA_EXTRA_ELAB_OPTION                ; modelsim=-sv_lib ../../../../../XLR8Core/extras/modelsim_windows/uc_top_wrap_64          ; --            ; --               ; eda_simulation ;
 ; EDA_MAINTAIN_DESIGN_HIERARCHY        ; On                                                                                       ; --            ; --               ; eda_simulation ;
@@ -144,13 +144,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4840 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:33     ; 1.5                     ; 5724 MB             ; 00:01:04                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
-; Power Analyzer       ; 00:00:06     ; 2.0                     ; 4926 MB             ; 00:00:12                           ;
-; Timing Analyzer      ; 00:00:06     ; 2.1                     ; 4904 MB             ; 00:00:12                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4850 MB             ; 00:00:20                           ;
+; Fitter               ; 00:00:32     ; 1.5                     ; 5722 MB             ; 00:00:58                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:06     ; 2.0                     ; 4926 MB             ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:06     ; 2.1                     ; 4903 MB             ; 00:00:11                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4771 MB             ; 00:00:02                           ;
-; Total                ; 00:01:00     ; --                      ; --                  ; 00:01:53                           ;
+; Total                ; 00:00:58     ; --                      ; --                  ; 00:01:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

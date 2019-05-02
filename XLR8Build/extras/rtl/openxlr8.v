@@ -59,6 +59,9 @@
   // code has been moved to an include file located in the XLR8Core. It
   // is inserted here at compile time.
   
+  
+  //`define COMP_SNO = 1
+  
   module openxlr8
 `include "../../../XLR8Core/extras/rtl/openxlr8_module_io.vh"
 
@@ -176,10 +179,13 @@
    // logic [7:0]		xb1_dbusout;
    // logic 			xb1_out_en;
 
-   logic [7:0]                  lfsr_dbusout;
-   logic 			lfsr_out_en;
-   logic 			lfsr_heartbeat;
-   logic 			lfsr_long_hb;
+   //logic [7:0]  lfsr_dbusout;
+   //logic 			lfsr_out_en;
+   //logic 			lfsr_heartbeat;
+   //logic 			lfsr_long_hb;
+	
+	logic [7:0]    esc_dbusout;
+   logic 			esc_out_en;
 	
 	
 	// Fet Driver Signals
@@ -194,6 +200,10 @@
 	logic          feedback_1;
 	logic          feedback_2;
 	logic          feedback_3;
+	
+	// Sync Pin
+	logic          sync;
+	logic          sync2;
     
 	
    //----------------------------------------------------------------------
@@ -207,24 +217,27 @@
    //
    // Here is an example for the LSFR XB.
 
-   xlr8_lfsr 
+   xlr8_esc 
      #(
-       .LFSR_CTRL_ADDR (LFSR_CTRL_Address),
-       .LFSR_SEED_ADDR (LFSR_SEED_Address),
-       .LFSR_DATA_ADDR (LFSR_DATA_Address),
+       //.LFSR_CTRL_ADDR (LFSR_CTRL_Address),
+       //.LFSR_SEED_ADDR (LFSR_SEED_Address),
+       //.LFSR_DATA_ADDR (LFSR_DATA_Address),
+		 .ESC_PWM_ADDR (ESC_PWM_Address),
        .WIDTH          (8)
        )
-   lfsr_inst  
+   esc_inst  
      (// Clock and Reset
       .rstn        (rstn),
       .clk         (clk),
       .clken       (1'b1),
       // I/O
       .dbus_in     (dbus_in),
-      .dbus_out    (lfsr_dbusout),
-      .io_out_en   (lfsr_out_en),
-      .heartbeat   (lfsr_heartbeat),
-		.long_hb     (lfsr_long_hb),
+      //.dbus_out    (lfsr_dbusout),
+		.dbus_out    (esc_dbusout),
+		.io_out_en   (esc_out_en),
+      //.io_out_en   (lfsr_out_en),
+      //.heartbeat   (lfsr_heartbeat),
+		//.long_hb     (lfsr_long_hb),
       // DM
       .ramadr      (ramadr[7:0]),
       .ramre       (ramre),
@@ -240,7 +253,10 @@
 		
 		.feedback_1  (feedback_1),
 		.feedback_2  (feedback_2),
-		.feedback_3  (feedback_3)
+		.feedback_3  (feedback_3),
+		
+		.sync(sync),
+		.sync2(sync2)
 		
 		
       );
@@ -285,63 +301,161 @@
    // Set up pin 13 (LED) to be an output pin for LFSR heartbeat
    // Set up pin 2 to be an input pin for "long heartbeat" control
 
+	// OpenXlr8 Pins
    assign xbs_ddoe[0][13] = 1'b1; // enable data direction for pin 13
 	assign xbs_ddoe[0][12] = 1'b1; // enable data direction for pin 12
 	assign xbs_ddoe[0][11] = 1'b1; // enable data direction for pin 11
-	
 	assign xbs_ddoe[0][10] = 1'b1; // enable data direction for pin 10
 	assign xbs_ddoe[0][9]  = 1'b1; // enable data direction for pin 9
 	assign xbs_ddoe[0][8]  = 1'b1; // enable data direction for pin 8
 	assign xbs_ddoe[0][7]  = 1'b1; // enable data direction for pin 7
 	assign xbs_ddoe[0][6]  = 1'b1; // enable data direction for pin 6
 	assign xbs_ddoe[0][5]  = 1'b1; // enable data direction for pin 5
-   assign xbs_ddoe[0][2]  = 1'b1; // enable data direction for pin 2
-   
+   assign xbs_ddoe[0][4]  = 1'b1; // enable data direction for pin 2 (sync pin)
+	assign xbs_ddoe[0][3]  = 1'b1; // enable data direction for pin 2 (sync pin)
 	
+	`ifdef COMP_SNO
+	// Sno Pins
+	
+	/*assign xbs_ddoe[0][39]  = 1'b1; // enable data direction for pin
+	assign xbs_ddoe[0][38]  = 1'b1; // enable data direction for pin
+	assign xbs_ddoe[0][37]  = 1'b1; // enable data direction for pin
+	*/assign xbs_ddoe[0][36]  = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][35]  = 1'b1; // enable data direction for pin 
+   assign xbs_ddoe[0][34]  = 1'b1; // enable data direction for pin
+   
+	assign xbs_ddoe[0][33] = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][32] = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][31]  = 1'b1; // enable data direction for pin
+	assign xbs_ddoe[0][30]  = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][29]  = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][28]  = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][27]  = 1'b1; // enable data direction for pin 
+   assign xbs_ddoe[0][26]  = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][25] = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][24] = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][23] = 1'b1; // enable data direction for pin 
+	assign xbs_ddoe[0][22] = 1'b1; // enable data direction for pin 
+	`endif
+	
+	// OpenXlr8 
    assign xbs_ddov[0][13] = 1'b1; // set pin 13 to be an output
 	assign xbs_ddov[0][12] = 1'b1; // set pin 12 to be an output
 	assign xbs_ddov[0][11] = 1'b1; // set pin 11 to be an output
-	
 	assign xbs_ddov[0][10] = 1'b1; // set pin 10 to be an output
 	assign xbs_ddov[0][9]  = 1'b1; // set pin 9 to be an output
 	assign xbs_ddov[0][8]  = 1'b1; // set pin 8 to be an output
 	assign xbs_ddov[0][7]  = 1'b0; // set pin 7 to be an input
 	assign xbs_ddov[0][6]  = 1'b0; // set pin 6 to be an input
 	assign xbs_ddov[0][5]  = 1'b0; // set pin 5 to be an input
-   assign xbs_ddov[0][2]  = 1'b0; // set pin 2 to be an input
+   assign xbs_ddov[0][4]  = 1'b1; // set pin 2 to be an input (sync pin)
+	assign xbs_ddov[0][3]  = 1'b1; // set pin 2 to be an input (sync pin)
 	
 
+	// Sno
+	`ifdef COMP_SNO
+	/*
+	assign xbs_ddov[0][39] = 1'b0; // set pin to be an input
+	assign xbs_ddov[0][38] = 1'b0; // set pin to be an input
+	assign xbs_ddov[0][37]  = 1'b0; // set pin to be an input
+	*/assign xbs_ddov[0][36]  = 1'b0; // set pin to be an input
+	assign xbs_ddov[0][35]  = 1'b0; // set pin to be an input
+	assign xbs_ddov[0][34]  = 1'b0; // set pin to be an input
+	
+	assign xbs_ddov[0][33]  = 1'b1; // set pin to be an output
+   assign xbs_ddov[0][32]  = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][31] = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][30] = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][29] = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][28] = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][27]  = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][26]  = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][25]  = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][24]  = 1'b1; // set pin to be an output
+	assign xbs_ddov[0][23]  = 1'b1; // set pin to be an output
+   assign xbs_ddov[0][22]  = 1'b1; // set pin to be an output
+	`endif
+	
+	// OpenXlr8
    assign xbs_pvoe[0][13] = 1'b1; //~xb_pinx[2]; // set pin 13 to be an output ONLY IF pin 2 is grounded
 	assign xbs_pvoe[0][12] = 1'b1;
 	assign xbs_pvoe[0][11] = 1'b1;
-	
 	assign xbs_pvoe[0][10] = 1'b1;
 	assign xbs_pvoe[0][9]  = 1'b1;
 	assign xbs_pvoe[0][8]  = 1'b1;
 	assign xbs_pvoe[0][7]  = 1'b0;
 	assign xbs_pvoe[0][6]  = 1'b0;
 	assign xbs_pvoe[0][5]  = 1'b0;
-	
-   assign xbs_pvoe[0][2]  = 1'b0; // set pin 2 to never output the value of pvov
+	assign xbs_pvoe[0][4]  = 1'b1; // (sync pin)
+	assign xbs_pvoe[0][3]  = 1'b1; // (sync pin)
 
+	// Sno
+	`ifdef COMP_SNO
+	/*
+	assign xbs_pvoe[0][39] = 1'b0;
+	assign xbs_pvoe[0][38] = 1'b0;
+	assign xbs_pvoe[0][37] = 1'b0;
+	*/assign xbs_pvoe[0][36] = 1'b0;
+	assign xbs_pvoe[0][35]  = 1'b0;
+	assign xbs_pvoe[0][34]  = 1'b0;
+	
+	assign xbs_pvoe[0][33]  = 1'b1;
+	assign xbs_pvoe[0][32]  = 1'b1;
+	assign xbs_pvoe[0][31]  = 1'b1;
+	assign xbs_pvoe[0][30] = 1'b1;
+	assign xbs_pvoe[0][29] = 1'b1;
+	assign xbs_pvoe[0][28] = 1'b1;
+	assign xbs_pvoe[0][27] = 1'b1;
+	assign xbs_pvoe[0][26]  = 1'b1;
+	assign xbs_pvoe[0][25]  = 1'b1;
+	assign xbs_pvoe[0][24]  = 1'b1;
+	assign xbs_pvoe[0][23]  = 1'b1;
+	assign xbs_pvoe[0][22]  = 1'b1;
+	`endif
+	
+	// OpenXlr8
    assign xbs_pvov[0][13] = SD_1; // & ~rstn;
 	assign xbs_pvov[0][12] = IN_1;
 	assign xbs_pvov[0][11] = SD_2; 
-	
 	assign xbs_pvov[0][10] = IN_2;
 	assign xbs_pvov[0][9]  = SD_3;
 	assign xbs_pvov[0][8]  = IN_3;
-	assign xbs_pvov[0][7]  = 1'b0;
-	assign xbs_pvov[0][6]  = 1'b0;
-	assign xbs_pvov[0][5]  = 1'b0;
+	//assign xbs_pvov[0][7]  = 1'b0;
+	//assign xbs_pvov[0][6]  = 1'b0;
+	//assign xbs_pvov[0][5]  = 1'b0;
 	
-   assign xbs_pvov[0][2]  = 1'b0; // set pin 2 pvov to 0, this is ignored because pvoe for pin 2 is not enabled
+   assign xbs_pvov[0][4]  = sync; 
+	assign xbs_pvov[0][3]  = sync2;
 	
+	// Sno
+	`ifdef COMP_SNO
+	assign xbs_pvov[0][27] = IN_1; // & ~rstn;
+	assign xbs_pvov[0][26] = SD_1;
+	assign xbs_pvov[0][25] = IN_2; 
+	assign xbs_pvov[0][24] = SD_2;
+	assign xbs_pvov[0][23]  = IN_3;
+	assign xbs_pvov[0][22]  = SD_3;
+	assign xbs_pvov[0][34]  = 1'b0;
+	assign xbs_pvov[0][35]  = 1'b0;
+	assign xbs_pvov[0][36]  = 1'b0;
+	
+	assign xbs_pvov[0][33] = IN_1; // & ~rstn;
+	assign xbs_pvov[0][32] = SD_1;
+	assign xbs_pvov[0][31] = IN_2; 
+	assign xbs_pvov[0][30] = SD_2;
+	assign xbs_pvov[0][29]  = IN_3;
+	assign xbs_pvov[0][28]  = SD_3;
+	//assign xbs_pvov[0][]  = 1'b0;
+	//assign xbs_pvov[0][]  = 1'b0;
+	//assign xbs_pvov[0][]  = 1'b0;
+	`endif
 	
 	assign feedback_1 = xb_pinx[7];
 	assign feedback_2 = xb_pinx[6];
 	assign feedback_3 = xb_pinx[5];
-	
+	//assign feedback_1 = xb_pinx[36];
+	//assign feedback_2 = xb_pinx[35];
+	//assign feedback_3 = xb_pinx[34];
 	
 
    // End of XB instantiation
@@ -403,8 +517,11 @@
    //   assign dbus_out = 8'h00;
    //   assign io_out_en = 1'h0;
    
-   assign dbus_out  = lfsr_out_en ? lfsr_dbusout : 8'h00;
-   assign io_out_en = lfsr_out_en;
+   //assign dbus_out  = lfsr_out_en ? lfsr_dbusout : 8'h00;
+   //assign io_out_en = lfsr_out_en;
+	
+	assign dbus_out  = esc_out_en ? esc_dbusout : 8'h00;
+   assign io_out_en = esc_out_en;
    
    // End of combining logic
    //----------------------------------------------------------------------

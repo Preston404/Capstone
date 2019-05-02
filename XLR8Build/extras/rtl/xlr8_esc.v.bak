@@ -11,11 +11,12 @@
 //=================================================================
 ///////////////////////////////////////////////////////////////////
 
-module xlr8_lfsr (
+
+module xlr8_esc (
    // Outputs
-   dbus_out, io_out_en, heartbeat,
+   dbus_out, io_out_en, heartbeat, SD_1, SD_2, SD_3, IN_1, IN_2, IN_3,
    // Inputs
-   rstn, clk, clken, dbus_in, ramadr, ramre, ramwe, dm_sel, hb_enable, //long_hb,
+   rstn, clk, clken, dbus_in, ramadr, ramre, ramwe, dm_sel, hb_enable, long_hb, feedback_1, feedback_2, feedback_3
    );
 
    parameter LFSR_CTRL_ADDR = 0;
@@ -32,8 +33,25 @@ module xlr8_lfsr (
    output [7:0]              dbus_out;
    output                    io_out_en;
    input                     hb_enable;
-   //input                     long_hb;
+   input                     long_hb;
    output                    heartbeat;
+	
+	
+	// Fet Drivers
+	output                    SD_1;
+	output                    IN_1;
+	output                    SD_2;
+	output                    IN_2;
+	output                    SD_3;
+	output                    IN_3;
+	
+	
+	// Feedback Sensors
+	input                     feedback_1;
+	input                     feedback_2;
+	input                     feedback_3;
+	
+	
    // DM
    input [7:0]               ramadr;
    input                     ramre;
@@ -58,12 +76,15 @@ module xlr8_lfsr (
    assign ctrl_sel = (dm_sel && ramadr == LFSR_CTRL_ADDR);
    assign ctrl_we  = ctrl_sel && (ramwe);
    assign ctrl_re  = ctrl_sel && (ramre);
+	
    assign seed_sel = (dm_sel && ramadr == LFSR_SEED_ADDR);
    assign seed_we  = seed_sel && (ramwe);
    assign seed_re  = seed_sel && (ramre);
+	
    assign data_sel = (dm_sel && ramadr == LFSR_DATA_ADDR);
    assign data_we  = data_sel && (ramwe);
    assign data_re  = data_sel && (ramre);
+	
    assign dbus_out =  ({8{ctrl_sel}} & lfsr_ctrl) |
                       ({8{seed_sel}} & lfsr_seed) |
                       ({8{data_sel}} & lfsr_data);
@@ -92,7 +113,7 @@ module xlr8_lfsr (
    // note: new_seed needs to be offset one clock from seed_we to line 
    // seed data up correctly
 
-   alorium_lfsr lfsr_inst (
+   alorium_esc esc_inst (
                         // Clock and Reset
                         .clk       (clk),
                         .reset_n   (rstn),
@@ -103,7 +124,21 @@ module xlr8_lfsr (
                         .long_hb   (lfsr_ctrl[1]),
                         // Output
                         .heartbeat (heartbeat),
-                        .lfsr_data (lfsr_data));
+                        .lfsr_data (lfsr_data),
+						
+						      
+						      .IN_1      (IN_1),
+						      .IN_2      (IN_2),
+						      .IN_3      (IN_3),
+						      .SD_1      (SD_1),
+						      .SD_2      (SD_2),
+						      .SD_3      (SD_3),
+						      
+						      .feedback_1(~feedback_1),
+							   .feedback_2(~feedback_2),
+						      .feedback_3(~feedback_3)
+								
+						);
 
 endmodule // xlr8_lfsr
 

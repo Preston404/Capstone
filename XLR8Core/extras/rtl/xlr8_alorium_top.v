@@ -27,6 +27,8 @@
 `include "avr_adr_pack.vh"
 
 // Define XLR8_BOARD if no other board defined
+//`define SNO_BOARD = 1
+
 `ifdef SNO_BOARD
 `include "sno_adr_pack.vh"
 `else

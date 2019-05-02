@@ -147,6 +147,8 @@ set_global_assignment -name SDC_FILE ../../../XLR8Core/extras/quartus/altera_mod
 set_global_assignment -name SDC_FILE ../../../XLR8Core/extras/quartus/altera_onchip_flash.sdc
 set_parameter -name NUM_PINS 20
 source ../../../XLR8Core/extras/quartus/xlr8_base.qsf
+set_global_assignment -name VERILOG_FILE ../../../XLR8Build/extras/rtl/alorium_esc.v
+set_global_assignment -name VERILOG_FILE ../../../XLR8Build/extras/rtl/xlr8_esc.v
 set_global_assignment -name SEARCH_PATH ../../../XLR8Core/extras/rtl
 set_global_assignment -name SYSTEMVERILOG_FILE ../../../XLR8Core/extras/rtl/xlr8_alorium_top.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/openxlr8.v

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for sno_16MHz
-Thu Jan 31 20:27:13 2019
+Mon Apr 22 19:52:45 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -18,13 +18,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  10. Analysis & Synthesis DSP Block Usage Summary
  11. Analysis & Synthesis IP Cores Summary
  12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for xlr8_atmega328clone:uc_top_wrp_vlog_inst
- 17. Source assignments for xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst|altsyncram_s4h1:auto_generated
- 18. Source assignments for xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component|altsyncram_4hh2:auto_generated
- 19. Source assignments for openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for xlr8_atmega328clone:uc_top_wrp_vlog_inst
+ 18. Source assignments for xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst|altsyncram_s4h1:auto_generated
+ 19. Source assignments for xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component|altsyncram_4hh2:auto_generated
  20. Parameter Settings for User Entity Instance: Top-level Entity: |xlr8_alorium_top
  21. Parameter Settings for User Entity Instance: xlr8_clocks:clocks_inst
  22. Parameter Settings for User Entity Instance: xlr8_clocks:clocks_inst|pll16:pll_inst|altpll:altpll_component
@@ -44,28 +44,26 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  36. Parameter Settings for User Entity Instance: xlr8_portmux:portmux_g_inst
  37. Parameter Settings for User Entity Instance: avr_port:pport_g_inst
  38. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst
- 39. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst
- 40. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst
- 41. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|debouncer:f1
- 42. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|debouncer:f2
- 43. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|debouncer:f3
- 44. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component
- 45. altpll Parameter Settings by Entity Instance
- 46. altsyncram Parameter Settings by Entity Instance
- 47. Port Connectivity Checks: "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst"
- 48. Port Connectivity Checks: "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst"
- 49. Port Connectivity Checks: "avr_port:pport_g_inst"
- 50. Port Connectivity Checks: "avr_port:pport_e_inst"
- 51. Port Connectivity Checks: "avr_port:pport_a_inst"
- 52. Port Connectivity Checks: "xlr8_gpio:gpio_inst"
- 53. Port Connectivity Checks: "xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst"
- 54. Port Connectivity Checks: "xlr8_iomux328:iomux328_inst"
- 55. Port Connectivity Checks: "xlr8_xb_pinmux:xb_pinmux_inst"
- 56. Port Connectivity Checks: "xlr8_clocks:clocks_inst"
- 57. Post-Synthesis Netlist Statistics for Top Partition
- 58. Elapsed Time Per Partition
- 59. Analysis & Synthesis Messages
- 60. Analysis & Synthesis Suppressed Messages
+ 39. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst
+ 40. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst
+ 41. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f1
+ 42. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f2
+ 43. Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f3
+ 44. altpll Parameter Settings by Entity Instance
+ 45. altsyncram Parameter Settings by Entity Instance
+ 46. Port Connectivity Checks: "openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst"
+ 47. Port Connectivity Checks: "avr_port:pport_g_inst"
+ 48. Port Connectivity Checks: "avr_port:pport_e_inst"
+ 49. Port Connectivity Checks: "avr_port:pport_a_inst"
+ 50. Port Connectivity Checks: "xlr8_gpio:gpio_inst"
+ 51. Port Connectivity Checks: "xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst"
+ 52. Port Connectivity Checks: "xlr8_iomux328:iomux328_inst"
+ 53. Port Connectivity Checks: "xlr8_xb_pinmux:xb_pinmux_inst"
+ 54. Port Connectivity Checks: "xlr8_clocks:clocks_inst"
+ 55. Post-Synthesis Netlist Statistics for Top Partition
+ 56. Elapsed Time Per Partition
+ 57. Analysis & Synthesis Messages
+ 58. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -91,15 +89,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 31 20:27:13 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 22 19:52:45 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; sno_16MHz                                   ;
 ; Top-level Entity Name              ; xlr8_alorium_top                            ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 7,377                                       ;
-;     Total combinational functions  ; 6,481                                       ;
-;     Dedicated logic registers      ; 2,838                                       ;
-; Total registers                    ; 2838                                        ;
+; Total logic elements               ; 7,349                                       ;
+;     Total combinational functions  ; 6,439                                       ;
+;     Dedicated logic registers      ; 2,855                                       ;
+; Total registers                    ; 2855                                        ;
 ; Total pins                         ; 65                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 280,320                                     ;
@@ -224,66 +222,64 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                  ;
-+----------------------------------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+
-; File Name with User-Entered Path                                                       ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                           ; Library    ;
-+----------------------------------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+
-; ../rtl/debouncer.v                                                                     ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/debouncer.v                                             ;            ;
-; ../rtl/alorium_lfsr.v                                                                  ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v                                          ;            ;
-; ../../../XLR8Core/extras/quartus/sno_atmega328clone_16MHz.qxp                          ; yes             ; User File                              ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/quartus/sno_atmega328clone_16MHz.qxp                         ;            ;
-; ../../../XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/int_osc.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/int_osc.v                   ; int_osc    ;
-; ../../../XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/submodules/altera_int_osc.v  ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/submodules/altera_int_osc.v ; int_osc    ;
-; ../../../XLR8Core/extras/rtl/ip/pll16/pll16.v                                          ; yes             ; User Wizard-Generated File             ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/pll16/pll16.v                                         ;            ;
-; ../../../XLR8Core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v                          ; yes             ; User Wizard-Generated File             ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v                         ;            ;
-; ../../../XLR8Core/extras/rtl/xlr8_alorium_top.v                                        ; yes             ; User SystemVerilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v                                       ;            ;
-; ../rtl/openxlr8.v                                                                      ; yes             ; User SystemVerilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v                                              ;            ;
-; ../rtl/xlr8_lfsr.v                                                                     ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_lfsr.v                                             ;            ;
-; my_ROM.v                                                                               ; yes             ; User Wizard-Generated File             ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/my_ROM.v                                            ;            ;
-; /users/user/documents/arduino/libraries/xlr8build/extras/rtl/xb_adr_pack.vh            ; yes             ; Auto-Found Unspecified File            ; /users/user/documents/arduino/libraries/xlr8build/extras/rtl/xb_adr_pack.vh                                            ;            ;
-; /users/user/documents/arduino/libraries/xlr8core/extras/rtl/openxlr8_module_io.vh      ; yes             ; Auto-Found Unspecified File            ; /users/user/documents/arduino/libraries/xlr8core/extras/rtl/openxlr8_module_io.vh                                      ;            ;
-; synth_ctrl_pack.vh                                                                     ; yes             ; Auto-Found Unspecified File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/synth_ctrl_pack.vh                                       ;            ;
-; avr_adr_pack.vh                                                                        ; yes             ; Auto-Found Unspecified File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/avr_adr_pack.vh                                          ;            ;
-; sno_adr_pack.vh                                                                        ; yes             ; Auto-Found Unspecified File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/sno_adr_pack.vh                                          ;            ;
-; xlr8_clocks.v                                                                          ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_clocks.v                                            ;            ;
-; altpll.tdf                                                                             ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                                                      ;            ;
-; aglobal181.inc                                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                  ;            ;
-; stratix_pll.inc                                                                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                                                 ;            ;
-; stratixii_pll.inc                                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                                               ;            ;
-; cycloneii_pll.inc                                                                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                               ;            ;
-; db/pll16_altpll.v                                                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/pll16_altpll.v                                   ;            ;
-; synch.v                                                                                ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/synch.v                                                  ;            ;
-; xlr8_xb_pinmux.v                                                                       ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_xb_pinmux.v                                         ;            ;
-; xlr8_irq.v                                                                             ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_irq.v                                               ;            ;
-; xlr8_iomux328.v                                                                        ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v                                          ;            ;
-; xlr8_d_mem.v                                                                           ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_d_mem.v                                             ;            ;
-; altsyncram.tdf                                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                  ;            ;
-; stratix_ram_block.inc                                                                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                           ;            ;
-; lpm_mux.inc                                                                            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                     ;            ;
-; lpm_decode.inc                                                                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                  ;            ;
-; a_rdenreg.inc                                                                          ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                   ;            ;
-; altrom.inc                                                                             ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                      ;            ;
-; altram.inc                                                                             ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                      ;            ;
-; altdpram.inc                                                                           ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                    ;            ;
-; db/altsyncram_s4h1.tdf                                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_s4h1.tdf                              ;            ;
-; xlr8_p_mem.v                                                                           ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_p_mem.v                                             ;            ;
-; db/altsyncram_4hh2.tdf                                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_4hh2.tdf                              ;            ;
-; db/decode_97a.tdf                                                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/decode_97a.tdf                                   ;            ;
-; db/decode_2j9.tdf                                                                      ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/decode_2j9.tdf                                   ;            ;
-; db/mux_83b.tdf                                                                         ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/mux_83b.tdf                                      ;            ;
-; xlr8_gpio.v                                                                            ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_gpio.v                                              ;            ;
-; xlr8_portmux.v                                                                         ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v                                           ;            ;
-; avr_port.v                                                                             ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/avr_port.v                                               ;            ;
-; db/altsyncram_6u81.tdf                                                                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf                              ;            ;
-; rom_init.mif                                                                           ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/rom_init.mif                                        ;            ;
-; ../ip/max10flash_10M16/max10flash/synthesis/submodules/rtl/altera_onchip_flash_block.v ; yes             ; Encrypted User Verilog HDL File        ; ../ip/max10flash_10M16/max10flash/synthesis/submodules/rtl/altera_onchip_flash_block.v                                 ; max10flash ;
-; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot_avmm.v        ; yes             ; Encrypted User Verilog HDL File        ; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot_avmm.v                                        ; dualconfig ;
-; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot.v             ; yes             ; Encrypted User Verilog HDL File        ; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot.v                                             ; dualconfig ;
-+----------------------------------------------------------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+
+; File Name with User-Entered Path                                                       ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                           ; Library    ;
++----------------------------------------------------------------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+
+; ../rtl/alorium_esc.v                                                                   ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v                                           ;            ;
+; ../rtl/xlr8_esc.v                                                                      ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_esc.v                                              ;            ;
+; ../rtl/debouncer.v                                                                     ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/debouncer.v                                             ;            ;
+; ../../../XLR8Core/extras/quartus/sno_atmega328clone_16MHz.qxp                          ; yes             ; User File                        ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/quartus/sno_atmega328clone_16MHz.qxp                         ;            ;
+; ../../../XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/int_osc.v                    ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/int_osc.v                   ; int_osc    ;
+; ../../../XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/submodules/altera_int_osc.v  ; yes             ; User Verilog HDL File            ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/int_osc/int_osc/synthesis/submodules/altera_int_osc.v ; int_osc    ;
+; ../../../XLR8Core/extras/rtl/ip/pll16/pll16.v                                          ; yes             ; User Wizard-Generated File       ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/pll16/pll16.v                                         ;            ;
+; ../../../XLR8Core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v                          ; yes             ; User Wizard-Generated File       ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v                         ;            ;
+; ../../../XLR8Core/extras/rtl/xlr8_alorium_top.v                                        ; yes             ; User SystemVerilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v                                       ;            ;
+; ../rtl/openxlr8.v                                                                      ; yes             ; User SystemVerilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v                                              ;            ;
+; /users/user/documents/arduino/libraries/xlr8build/extras/rtl/xb_adr_pack.vh            ; yes             ; Auto-Found Unspecified File      ; /users/user/documents/arduino/libraries/xlr8build/extras/rtl/xb_adr_pack.vh                                            ;            ;
+; /users/user/documents/arduino/libraries/xlr8core/extras/rtl/openxlr8_module_io.vh      ; yes             ; Auto-Found Unspecified File      ; /users/user/documents/arduino/libraries/xlr8core/extras/rtl/openxlr8_module_io.vh                                      ;            ;
+; synth_ctrl_pack.vh                                                                     ; yes             ; Auto-Found Unspecified File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/synth_ctrl_pack.vh                                       ;            ;
+; avr_adr_pack.vh                                                                        ; yes             ; Auto-Found Unspecified File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/avr_adr_pack.vh                                          ;            ;
+; sno_adr_pack.vh                                                                        ; yes             ; Auto-Found Unspecified File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/sno_adr_pack.vh                                          ;            ;
+; xlr8_clocks.v                                                                          ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_clocks.v                                            ;            ;
+; altpll.tdf                                                                             ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf                                                      ;            ;
+; aglobal181.inc                                                                         ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                  ;            ;
+; stratix_pll.inc                                                                        ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc                                                 ;            ;
+; stratixii_pll.inc                                                                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc                                               ;            ;
+; cycloneii_pll.inc                                                                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc                                               ;            ;
+; db/pll16_altpll.v                                                                      ; yes             ; Auto-Generated Megafunction      ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/pll16_altpll.v                                   ;            ;
+; synch.v                                                                                ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/synch.v                                                  ;            ;
+; xlr8_xb_pinmux.v                                                                       ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_xb_pinmux.v                                         ;            ;
+; xlr8_irq.v                                                                             ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_irq.v                                               ;            ;
+; xlr8_iomux328.v                                                                        ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v                                          ;            ;
+; xlr8_d_mem.v                                                                           ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_d_mem.v                                             ;            ;
+; altsyncram.tdf                                                                         ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                  ;            ;
+; stratix_ram_block.inc                                                                  ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                           ;            ;
+; lpm_mux.inc                                                                            ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                     ;            ;
+; lpm_decode.inc                                                                         ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                  ;            ;
+; a_rdenreg.inc                                                                          ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                   ;            ;
+; altrom.inc                                                                             ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                      ;            ;
+; altram.inc                                                                             ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                      ;            ;
+; altdpram.inc                                                                           ; yes             ; Megafunction                     ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                    ;            ;
+; db/altsyncram_s4h1.tdf                                                                 ; yes             ; Auto-Generated Megafunction      ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_s4h1.tdf                              ;            ;
+; xlr8_p_mem.v                                                                           ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_p_mem.v                                             ;            ;
+; db/altsyncram_4hh2.tdf                                                                 ; yes             ; Auto-Generated Megafunction      ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_4hh2.tdf                              ;            ;
+; db/decode_97a.tdf                                                                      ; yes             ; Auto-Generated Megafunction      ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/decode_97a.tdf                                   ;            ;
+; db/decode_2j9.tdf                                                                      ; yes             ; Auto-Generated Megafunction      ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/decode_2j9.tdf                                   ;            ;
+; db/mux_83b.tdf                                                                         ; yes             ; Auto-Generated Megafunction      ; C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/mux_83b.tdf                                      ;            ;
+; xlr8_gpio.v                                                                            ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_gpio.v                                              ;            ;
+; xlr8_portmux.v                                                                         ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v                                           ;            ;
+; avr_port.v                                                                             ; yes             ; Auto-Found Verilog HDL File      ; C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/avr_port.v                                               ;            ;
+; ../ip/max10flash_10M16/max10flash/synthesis/submodules/rtl/altera_onchip_flash_block.v ; yes             ; Encrypted User Verilog HDL File  ; ../ip/max10flash_10M16/max10flash/synthesis/submodules/rtl/altera_onchip_flash_block.v                                 ; max10flash ;
+; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot_avmm.v        ; yes             ; Encrypted User Verilog HDL File  ; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot_avmm.v                                        ; dualconfig ;
+; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot.v             ; yes             ; Encrypted User Verilog HDL File  ; ../ip/dualconfig_10M16/dualconfig/synthesis/submodules/rtl/alt_dual_boot.v                                             ; dualconfig ;
++----------------------------------------------------------------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------------+------------+
 
 
 +-----------------------------------------------------------+
@@ -291,20 +287,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 7,377       ;
+; Estimated Total logic elements              ; 7,349       ;
 ;                                             ;             ;
-; Total combinational functions               ; 6481        ;
+; Total combinational functions               ; 6439        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 3841        ;
-;     -- 3 input functions                    ; 1653        ;
-;     -- <=2 input functions                  ; 987         ;
+;     -- 4 input functions                    ; 3844        ;
+;     -- 3 input functions                    ; 1618        ;
+;     -- <=2 input functions                  ; 977         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 6033        ;
-;     -- arithmetic mode                      ; 448         ;
+;     -- normal mode                          ; 6002        ;
+;     -- arithmetic mode                      ; 437         ;
 ;                                             ;             ;
-; Total registers                             ; 2838        ;
-;     -- Dedicated logic registers            ; 2838        ;
+; Total registers                             ; 2855        ;
+;     -- Dedicated logic registers            ; 2855        ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 65          ;
@@ -317,8 +313,8 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; Clock~input ;
-; Maximum fan-out                             ; 2799        ;
-; Total fan-out                               ; 33873       ;
+; Maximum fan-out                             ; 2787        ;
+; Total fan-out                               ; 33757       ;
 ; Average fan-out                             ; 3.53        ;
 +---------------------------------------------+-------------+
 
@@ -328,31 +324,31 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                                      ; Entity Name                                          ; Library Name ;
 +------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+--------------+
-; |xlr8_alorium_top                                                                                                ; 6481 (70)           ; 2838 (0)                  ; 280320      ; 1          ; 4            ; 2       ; 1         ; 65   ; 0            ; 0          ; |xlr8_alorium_top                                                                                                                                                                                                                                                                                                                                                                                        ; xlr8_alorium_top                                     ; work         ;
-;    |avr_port:pport_a_inst|                                                                                       ; 30 (30)             ; 24 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst                                                                                                                                                                                                                                                                                                                                                                  ; avr_port                                             ; work         ;
+; |xlr8_alorium_top                                                                                                ; 6439 (70)           ; 2855 (0)                  ; 280320      ; 1          ; 4            ; 2       ; 1         ; 65   ; 0            ; 0          ; |xlr8_alorium_top                                                                                                                                                                                                                                                                                                                                                                                        ; xlr8_alorium_top                                     ; work         ;
+;    |avr_port:pport_a_inst|                                                                                       ; 26 (26)             ; 24 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst                                                                                                                                                                                                                                                                                                                                                                  ; avr_port                                             ; work         ;
 ;       |synch:Tn_sync[0]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst|synch:Tn_sync[0]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[1]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst|synch:Tn_sync[1]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[2]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst|synch:Tn_sync[2]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[3]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst|synch:Tn_sync[3]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[4]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst|synch:Tn_sync[4]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[5]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_a_inst|synch:Tn_sync[5]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
-;    |avr_port:pport_e_inst|                                                                                       ; 31 (31)             ; 24 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst                                                                                                                                                                                                                                                                                                                                                                  ; avr_port                                             ; work         ;
+;    |avr_port:pport_e_inst|                                                                                       ; 23 (23)             ; 24 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst                                                                                                                                                                                                                                                                                                                                                                  ; avr_port                                             ; work         ;
 ;       |synch:Tn_sync[0]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst|synch:Tn_sync[0]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[1]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst|synch:Tn_sync[1]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[2]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst|synch:Tn_sync[2]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[3]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst|synch:Tn_sync[3]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[4]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst|synch:Tn_sync[4]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[5]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_e_inst|synch:Tn_sync[5]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
-;    |avr_port:pport_g_inst|                                                                                       ; 32 (32)             ; 24 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst                                                                                                                                                                                                                                                                                                                                                                  ; avr_port                                             ; work         ;
+;    |avr_port:pport_g_inst|                                                                                       ; 29 (29)             ; 24 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst                                                                                                                                                                                                                                                                                                                                                                  ; avr_port                                             ; work         ;
 ;       |synch:Tn_sync[0]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst|synch:Tn_sync[0]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[1]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst|synch:Tn_sync[1]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[2]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst|synch:Tn_sync[2]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[3]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst|synch:Tn_sync[3]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[4]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst|synch:Tn_sync[4]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
 ;       |synch:Tn_sync[5]|                                                                                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|avr_port:pport_g_inst|synch:Tn_sync[5]                                                                                                                                                                                                                                                                                                                                                 ; synch                                                ; work         ;
-;    |openxlr8:xb_openxlr8_inst|                                                                                   ; 102 (0)             ; 56 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst                                                                                                                                                                                                                                                                                                                                                              ; openxlr8                                             ; work         ;
-;       |xlr8_lfsr:lfsr_inst|                                                                                      ; 102 (8)             ; 56 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst                                                                                                                                                                                                                                                                                                                                          ; xlr8_lfsr                                            ; work         ;
-;          |alorium_lfsr:lfsr_inst|                                                                                ; 94 (94)             ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst                                                                                                                                                                                                                                                                                                                   ; alorium_lfsr                                         ; work         ;
+;    |openxlr8:xb_openxlr8_inst|                                                                                   ; 77 (0)              ; 73 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst                                                                                                                                                                                                                                                                                                                                                              ; openxlr8                                             ; work         ;
+;       |xlr8_esc:esc_inst|                                                                                        ; 77 (8)              ; 73 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst                                                                                                                                                                                                                                                                                                                                            ; xlr8_esc                                             ; work         ;
+;          |alorium_esc:esc_inst|                                                                                  ; 69 (69)             ; 56 (56)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst                                                                                                                                                                                                                                                                                                                       ; alorium_esc                                          ; work         ;
 ;    |xlr8_atmega328clone:uc_top_wrp_vlog_inst|                                                                    ; 6101 (94)           ; 2648 (1)                  ; 1792        ; 1          ; 4            ; 2       ; 1         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_atmega328clone:uc_top_wrp_vlog_inst                                                                                                                                                                                                                                                                                                                                               ; xlr8_atmega328clone                                  ; work         ;
 ;       |avr_core:avr_core_inst|                                                                                   ; 1705 (0)            ; 472 (0)                   ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_atmega328clone:uc_top_wrp_vlog_inst|avr_core:avr_core_inst                                                                                                                                                                                                                                                                                                                        ; avr_core                                             ; work         ;
 ;          |alu_avr:ALU_Inst|                                                                                      ; 111 (111)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_atmega328clone:uc_top_wrp_vlog_inst|avr_core:avr_core_inst|alu_avr:ALU_Inst                                                                                                                                                                                                                                                                                                       ; alu_avr                                              ; work         ;
@@ -518,7 +514,7 @@ refer to the applicable agreement for further details.
 ;       |altsyncram:altsyncram_inst|                                                                               ; 0 (0)               ; 0 (0)                     ; 16384       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst                                                                                                                                                                                                                                                                                                                                       ; altsyncram                                           ; work         ;
 ;          |altsyncram_s4h1:auto_generated|                                                                        ; 0 (0)               ; 0 (0)                     ; 16384       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst|altsyncram_s4h1:auto_generated                                                                                                                                                                                                                                                                                                        ; altsyncram_s4h1                                      ; work         ;
 ;    |xlr8_gpio:gpio_inst|                                                                                         ; 19 (19)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_gpio:gpio_inst                                                                                                                                                                                                                                                                                                                                                                    ; xlr8_gpio                                            ; work         ;
-;    |xlr8_iomux328:iomux328_inst|                                                                                 ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_iomux328:iomux328_inst                                                                                                                                                                                                                                                                                                                                                            ; xlr8_iomux328                                        ; work         ;
+;    |xlr8_iomux328:iomux328_inst|                                                                                 ; 18 (18)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_iomux328:iomux328_inst                                                                                                                                                                                                                                                                                                                                                            ; xlr8_iomux328                                        ; work         ;
 ;    |xlr8_irq:xlr8_irq_inst|                                                                                      ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_irq:xlr8_irq_inst                                                                                                                                                                                                                                                                                                                                                                 ; xlr8_irq                                             ; work         ;
 ;    |xlr8_p_mem:p_mem_inst|                                                                                       ; 34 (0)              ; 2 (0)                     ; 262144      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_p_mem:p_mem_inst                                                                                                                                                                                                                                                                                                                                                                  ; xlr8_p_mem                                           ; work         ;
 ;       |ram2p16384x16:ram16k.ram2p16384x16_inst|                                                                  ; 34 (0)              ; 2 (0)                     ; 262144      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst                                                                                                                                                                                                                                                                                                                          ; ram2p16384x16                                        ; work         ;
@@ -527,6 +523,7 @@ refer to the applicable agreement for further details.
 ;                |decode_97a:decode2|                                                                              ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component|altsyncram_4hh2:auto_generated|decode_97a:decode2                                                                                                                                                                                                                                        ; decode_97a                                           ; work         ;
 ;                |mux_83b:mux4|                                                                                    ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component|altsyncram_4hh2:auto_generated|mux_83b:mux4                                                                                                                                                                                                                                              ; mux_83b                                              ; work         ;
 ;                |mux_83b:mux5|                                                                                    ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component|altsyncram_4hh2:auto_generated|mux_83b:mux5                                                                                                                                                                                                                                              ; mux_83b                                              ; work         ;
+;    |xlr8_xb_pinmux:xb_pinmux_inst|                                                                               ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |xlr8_alorium_top|xlr8_xb_pinmux:xb_pinmux_inst                                                                                                                                                                                                                                                                                                                                                          ; xlr8_xb_pinmux                                       ; work         ;
 +------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -561,34 +558,61 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                       ;
-+--------+----------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-; Vendor ; IP Core Name   ; Version ; Release Date ; License Type ; Entity Instance                                                                                           ; IP Include File                                               ;
-+--------+----------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
-; N/A    ; altera_int_osc ; 17.1    ; N/A          ; N/A          ; |xlr8_alorium_top|xlr8_clocks:clocks_inst|int_osc:int_osc_inst                                            ; ../../../XLR8Core/extras/rtl/ip/int_osc/int_osc.qsys          ;
-; Altera ; ALTPLL         ; 17.1    ; N/A          ; N/A          ; |xlr8_alorium_top|xlr8_clocks:clocks_inst|pll16:pll_inst                                                  ; ../../../XLR8Core/extras/rtl/ip/pll16/pll16.v                 ;
-; Altera ; RAM: 2-PORT    ; 17.1    ; N/A          ; N/A          ; |xlr8_alorium_top|xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst                           ; ../../../XLR8Core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v ;
-; Altera ; ROM: 1-PORT    ; 18.1    ; N/A          ; N/A          ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst ; my_ROM.v                                                      ;
-+--------+----------------+---------+--------------+--------------+-----------------------------------------------------------------------------------------------------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                             ;
++--------+----------------+---------+--------------+--------------+---------------------------------------------------------------------------------+---------------------------------------------------------------+
+; Vendor ; IP Core Name   ; Version ; Release Date ; License Type ; Entity Instance                                                                 ; IP Include File                                               ;
++--------+----------------+---------+--------------+--------------+---------------------------------------------------------------------------------+---------------------------------------------------------------+
+; N/A    ; altera_int_osc ; 17.1    ; N/A          ; N/A          ; |xlr8_alorium_top|xlr8_clocks:clocks_inst|int_osc:int_osc_inst                  ; ../../../XLR8Core/extras/rtl/ip/int_osc/int_osc.qsys          ;
+; Altera ; ALTPLL         ; 17.1    ; N/A          ; N/A          ; |xlr8_alorium_top|xlr8_clocks:clocks_inst|pll16:pll_inst                        ; ../../../XLR8Core/extras/rtl/ip/pll16/pll16.v                 ;
+; Altera ; RAM: 2-PORT    ; 17.1    ; N/A          ; N/A          ; |xlr8_alorium_top|xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst ; ../../../XLR8Core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v ;
++--------+----------------+---------+--------------+--------------+---------------------------------------------------------------------------------+---------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; xlr8_clocks:clocks_inst|PRADC          ; Stuck at GND due to stuck port data_in ;
-; xlr8_clocks:clocks_inst|PRSPI          ; Stuck at GND due to stuck port data_in ;
-; xlr8_clocks:clocks_inst|PRTIM0         ; Stuck at GND due to stuck port data_in ;
-; xlr8_clocks:clocks_inst|PRTIM1         ; Stuck at GND due to stuck port data_in ;
-; xlr8_clocks:clocks_inst|PRTIM2         ; Stuck at GND due to stuck port data_in ;
-; xlr8_clocks:clocks_inst|PRTWI          ; Stuck at GND due to stuck port data_in ;
-; xlr8_clocks:clocks_inst|PRUSART0       ; Stuck at GND due to stuck port data_in ;
-; xlr8_irq:xlr8_irq_inst|xack[0,1]       ; Lost fanout                            ;
-; xlr8_irq:xlr8_irq_inst|xifr[0,1]       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 11 ;                                        ;
-+----------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                           ;
++--------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+; Register name                                                                                    ; Reason for Removal                                                                        ;
++--------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_compare[0]                  ; Stuck at VCC due to stuck port data_in                                                    ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_compare[1,2]                ; Stuck at GND due to stuck port data_in                                                    ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_compare[3,4]                ; Stuck at VCC due to stuck port data_in                                                    ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_compare[5..7]               ; Stuck at GND due to stuck port data_in                                                    ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|startup                         ; Stuck at VCC due to stuck port data_in                                                    ;
+; xlr8_clocks:clocks_inst|PRADC                                                                    ; Stuck at GND due to stuck port data_in                                                    ;
+; xlr8_clocks:clocks_inst|PRSPI                                                                    ; Stuck at GND due to stuck port data_in                                                    ;
+; xlr8_clocks:clocks_inst|PRTIM0                                                                   ; Stuck at GND due to stuck port data_in                                                    ;
+; xlr8_clocks:clocks_inst|PRTIM1                                                                   ; Stuck at GND due to stuck port data_in                                                    ;
+; xlr8_clocks:clocks_inst|PRTIM2                                                                   ; Stuck at GND due to stuck port data_in                                                    ;
+; xlr8_clocks:clocks_inst|PRTWI                                                                    ; Stuck at GND due to stuck port data_in                                                    ;
+; xlr8_clocks:clocks_inst|PRUSART0                                                                 ; Stuck at GND due to stuck port data_in                                                    ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f3|state              ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f3|out_signal         ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f3|feedback_reg[0..8] ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f2|state              ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f2|out_signal         ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f2|feedback_reg[0..8] ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f1|state              ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f1|out_signal         ; Lost fanout                                                                               ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f1|feedback_reg[0..8] ; Lost fanout                                                                               ;
+; xlr8_irq:xlr8_irq_inst|xack[0,1]                                                                 ; Lost fanout                                                                               ;
+; xlr8_irq:xlr8_irq_inst|xifr[0,1]                                                                 ; Stuck at GND due to stuck port data_in                                                    ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|us_clk_reg[0]                   ; Merged with openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_count[0] ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|us_clk_reg[1]                   ; Merged with openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_count[1] ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|us_clk_reg[2]                   ; Merged with openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_count[2] ;
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|us_clk_reg[3]                   ; Merged with openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|pwm_count[3] ;
+; Total Number of Removed Registers = 57                                                           ;                                                                                           ;
++--------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                      ;
++--------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------+
+; Register name                                                            ; Reason for Removal        ; Registers Removed due to This Register                                                    ;
++--------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------+
+; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|startup ; Stuck at VCC              ; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f3|out_signal, ;
+;                                                                          ; due to stuck port data_in ; openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f2|out_signal  ;
++--------------------------------------------------------------------------+---------------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -596,12 +620,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2838  ;
-; Number of registers using Synchronous Clear  ; 167   ;
-; Number of registers using Synchronous Load   ; 227   ;
+; Total registers                              ; 2855  ;
+; Number of registers using Synchronous Clear  ; 161   ;
+; Number of registers using Synchronous Load   ; 214   ;
 ; Number of registers using Asynchronous Clear ; 1919  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1830  ;
+; Number of registers using Clock Enable       ; 1847  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -721,15 +745,19 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |xlr8_alorium_top|xlr8_clocks:clocks_inst|lock_count[1]                                             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|lfsr_data[7] ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 30 LEs               ; 60 LEs                 ; Yes        ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|hb_cnt[1]    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_g_inst|portx[2]                                                    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_e_inst|portx[2]                                                    ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_a_inst|portx[2]                                                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_g_inst|portx[0]                                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_e_inst|portx[1]                                                    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_a_inst|portx[5]                                                    ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |xlr8_alorium_top|xlr8_clocks:clocks_inst|lock_count[5]                                             ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|time_to_wait[3]  ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|startup_cnt[12]  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|lfsr_data[1]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |xlr8_alorium_top|openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|startup_state[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_g_inst|portx[4]                                                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |xlr8_alorium_top|avr_port:pport_a_inst|portx[1]                                                    ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |xlr8_alorium_top|stgi_xf_io_slv_dbusout[7]                                                         ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |xlr8_alorium_top|stgi_xf_io_slv_dbusout[5]                                                         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |xlr8_alorium_top|stgi_xf_io_slv_dbusout[1]                                                         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |xlr8_alorium_top|stgi_xf_io_slv_dbusout[0]                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
 
 
@@ -1275,15 +1303,6 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                     ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                                                              ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                               ;
-+---------------------------------+--------------------+------+-----------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -2003,121 +2022,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst ;
-+----------------+----------+----------------------------------------------------------------+
-; Parameter Name ; Value    ; Type                                                           ;
-+----------------+----------+----------------------------------------------------------------+
-; LFSR_CTRL_ADDR ; 11100000 ; Unsigned Binary                                                ;
-; LFSR_SEED_ADDR ; 11100001 ; Unsigned Binary                                                ;
-; LFSR_DATA_ADDR ; 11100010 ; Unsigned Binary                                                ;
-; WIDTH          ; 8        ; Signed Integer                                                 ;
-+----------------+----------+----------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst ;
++----------------+----------+--------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                         ;
++----------------+----------+--------------------------------------------------------------+
+; LFSR_CTRL_ADDR ; 11100000 ; Unsigned Binary                                              ;
+; LFSR_SEED_ADDR ; 11100001 ; Unsigned Binary                                              ;
+; LFSR_DATA_ADDR ; 11100010 ; Unsigned Binary                                              ;
+; WIDTH          ; 8        ; Signed Integer                                               ;
++----------------+----------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                     ;
-+----------------+-------+------------------------------------------------------------------------------------------+
-; HIGH           ; 1     ; Unsigned Binary                                                                          ;
-; LOW            ; 0     ; Unsigned Binary                                                                          ;
-+----------------+-------+------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; HIGH           ; 1     ; Unsigned Binary                                                                      ;
+; LOW            ; 0     ; Unsigned Binary                                                                      ;
++----------------+-------+--------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|debouncer:f1 ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                  ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
-; LOW            ; 0     ; Unsigned Binary                                                                                       ;
-; HIGH           ; 1     ; Unsigned Binary                                                                                       ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f1 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; LOW            ; 0     ; Unsigned Binary                                                                                   ;
+; HIGH           ; 1     ; Unsigned Binary                                                                                   ;
+; num_clks       ; 40    ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|debouncer:f2 ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                  ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
-; LOW            ; 0     ; Unsigned Binary                                                                                       ;
-; HIGH           ; 1     ; Unsigned Binary                                                                                       ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f2 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; LOW            ; 0     ; Unsigned Binary                                                                                   ;
+; HIGH           ; 1     ; Unsigned Binary                                                                                   ;
+; num_clks       ; 40    ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|debouncer:f3 ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                  ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
-; LOW            ; 0     ; Unsigned Binary                                                                                       ;
-; HIGH           ; 1     ; Unsigned Binary                                                                                       ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+----------------------------------------------------------------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                                                                                     ;
-+------------------------------------+----------------------+----------------------------------------------------------------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                                                  ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                                               ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                                                             ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                                                             ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                                                           ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                                                  ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                                                                                                  ;
-; WIDTH_A                            ; 22                   ; Signed Integer                                                                                           ;
-; WIDTHAD_A                          ; 13                   ; Signed Integer                                                                                           ;
-; NUMWORDS_A                         ; 8192                 ; Signed Integer                                                                                           ;
-; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                                                                                  ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                                                  ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                                                  ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                                                  ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                                                  ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                                                  ;
-; WIDTH_B                            ; 1                    ; Untyped                                                                                                  ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                                                                                  ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                                                                                  ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                                                  ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                                                  ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                                                  ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                                                  ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                                                                  ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                                                  ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                                                  ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                                                  ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                                                  ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                                                  ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                                                  ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                                                  ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                                                           ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                                                  ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                                                  ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                                                                                  ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                                                  ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                                                  ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                                                  ;
-; INIT_FILE                          ; ROM_init.mif         ; Untyped                                                                                                  ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                                                  ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                                                  ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                                                  ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                                                                  ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                                                  ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                                                                  ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                                                  ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                                                  ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                                                                                  ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                                                                  ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                                                                  ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                                                                                  ;
-; CBXI_PARAMETER                     ; altsyncram_6u81      ; Untyped                                                                                                  ;
-+------------------------------------+----------------------+----------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f3 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; LOW            ; 0     ; Unsigned Binary                                                                                   ;
+; HIGH           ; 1     ; Unsigned Binary                                                                                   ;
+; num_clks       ; 40    ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2138,70 +2099,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                                                                    ;
-+-------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-; Name                                      ; Value                                                                                                                   ;
-+-------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-; Number of entity instances                ; 3                                                                                                                       ;
-; Entity Instance                           ; xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst                                                                        ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                                             ;
-;     -- WIDTH_A                            ; 8                                                                                                                       ;
-;     -- NUMWORDS_A                         ; 2048                                                                                                                    ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                                            ;
-;     -- WIDTH_B                            ; 1                                                                                                                       ;
-;     -- NUMWORDS_B                         ; 1                                                                                                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                            ;
-;     -- RAM_BLOCK_TYPE                     ; M9K                                                                                                                     ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                               ;
-; Entity Instance                           ; xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component                           ;
-;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                                                                         ;
-;     -- WIDTH_A                            ; 16                                                                                                                      ;
-;     -- NUMWORDS_A                         ; 16384                                                                                                                   ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                                            ;
-;     -- WIDTH_B                            ; 16                                                                                                                      ;
-;     -- NUMWORDS_B                         ; 16384                                                                                                                   ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                                                                                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                               ;
-; Entity Instance                           ; openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                                                                                     ;
-;     -- WIDTH_A                            ; 22                                                                                                                      ;
-;     -- NUMWORDS_A                         ; 8192                                                                                                                    ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                                                                                                  ;
-;     -- WIDTH_B                            ; 1                                                                                                                       ;
-;     -- NUMWORDS_B                         ; 1                                                                                                                       ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                                  ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                                            ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                                    ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                               ;
-+-------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst"                                                               ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                             ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input  ; Warning  ; Input port expression (12 bits) is smaller than the input port (13 bits) it drives.  Extra input bit(s) "address[12..12]" will be connected to GND. ;
-; q       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                 ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                          ;
++-------------------------------------------+-----------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                         ;
++-------------------------------------------+-----------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 2                                                                                             ;
+; Entity Instance                           ; xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst                                              ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                                   ;
+;     -- WIDTH_A                            ; 8                                                                                             ;
+;     -- NUMWORDS_A                         ; 2048                                                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                                             ;
+;     -- NUMWORDS_B                         ; 1                                                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; M9K                                                                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                     ;
+; Entity Instance                           ; xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                                               ;
+;     -- WIDTH_A                            ; 16                                                                                            ;
+;     -- NUMWORDS_A                         ; 16384                                                                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                  ;
+;     -- WIDTH_B                            ; 16                                                                                            ;
+;     -- NUMWORDS_B                         ; 16384                                                                                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                     ;
++-------------------------------------------+-----------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst"                                                                                                    ;
+; Port Connectivity Checks: "openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst"                                                                                                      ;
 +-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                                                                                      ;
 +-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 ; clken     ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
-; SD_1      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; SD_2      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; SD_3      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; IN_1      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; IN_2      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; IN_3      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; heartbeat ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
 ; hb_enable ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -2300,30 +2235,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; blackbox                                     ; 1     ;
 ;     xlr8_atmega328clone:uc_top_wrp_vlog_inst ; 1     ;
 ; boundary_port                                ; 65    ;
-; cycloneiii_ff                                ; 190   ;
+; cycloneiii_ff                                ; 207   ;
 ;     CLR                                      ; 12    ;
-;     CLR SLD                                  ; 18    ;
-;     ENA                                      ; 25    ;
-;     ENA CLR                                  ; 62    ;
-;     ENA SCLR                                 ; 13    ;
-;     ENA SLD                                  ; 1     ;
-;     plain                                    ; 59    ;
+;     CLR SLD                                  ; 6     ;
+;     ENA                                      ; 37    ;
+;     ENA CLR                                  ; 74    ;
+;     ENA SCLR                                 ; 7     ;
+;     plain                                    ; 71    ;
 ; cycloneiii_io_obuf                           ; 57    ;
-; cycloneiii_lcell_comb                        ; 380   ;
-;     arith                                    ; 49    ;
-;         2 data inputs                        ; 49    ;
-;     normal                                   ; 331   ;
+; cycloneiii_lcell_comb                        ; 338   ;
+;     arith                                    ; 38    ;
+;         2 data inputs                        ; 37    ;
+;         3 data inputs                        ; 1     ;
+;     normal                                   ; 300   ;
 ;         0 data inputs                        ; 2     ;
-;         1 data inputs                        ; 4     ;
+;         1 data inputs                        ; 6     ;
 ;         2 data inputs                        ; 41    ;
-;         3 data inputs                        ; 132   ;
-;         4 data inputs                        ; 152   ;
+;         3 data inputs                        ; 96    ;
+;         4 data inputs                        ; 155   ;
 ; cycloneiii_pll                               ; 1     ;
 ; cycloneiii_ram_block                         ; 40    ;
 ; fiftyfivenm_oscillator                       ; 1     ;
 ;                                              ;       ;
 ; Max LUT depth                                ; 7.00  ;
-; Average LUT depth                            ; 2.77  ;
+; Average LUT depth                            ; 2.39  ;
 +----------------------------------------------+-------+
 
 
@@ -2342,14 +2277,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 31 20:27:01 2019
+    Info: Processing started: Mon Apr 22 19:52:34 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sno_top -c sno_16MHz
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8build/extras/rtl/alorium_esc.v
+    Info (12023): Found entity 1: alorium_esc File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8build/extras/rtl/xlr8_esc.v
+    Info (12023): Found entity 1: xlr8_esc File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_esc.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8build/extras/rtl/debouncer.v
     Info (12023): Found entity 1: debouncer File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/debouncer.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8build/extras/rtl/alorium_lfsr.v
-    Info (12023): Found entity 1: alorium_lfsr File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 34
+Warning (12019): Can't analyze file -- file ../rtl/alorium_lfsr.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8core/extras/quartus/sno_atmega328clone_16mhz.qxp
     Info (12023): Found entity 1: xlr8_atmega328clone File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/quartus/sno_atmega328clone_16MHz.qxp Line: -1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/ip/int_osc/int_osc/synthesis/int_osc.v
@@ -2360,26 +2298,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: pll16 File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/pll16/pll16.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v
     Info (12023): Found entity 1: ram2p16384x16 File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/ip/ram2p16384x16/ram2p16384x16.v Line: 39
+Warning (10886): Verilog HDL macro warning at xlr8_alorium_top.v(31): overriding existing definition for macro "SNO_BOARD", which was defined in the Quartus Prime Settings File (.qsf) or on the command line File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_alorium_top.v
-    Info (12023): Found entity 1: xlr8_alorium_top File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 40
+    Info (12023): Found entity 1: xlr8_alorium_top File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 42
 Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8build/extras/rtl/openxlr8.v
-    Info (12023): Found entity 1: openxlr8 File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 55
+    Info (12023): Found entity 1: openxlr8 File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 65
 Warning (12019): Can't analyze file -- file ../../../XLR8Float/extras/rtl/xlr8_float/xlr8_float_add1/dspba_library_package.vhd is missing
 Warning (12019): Can't analyze file -- file ../../../XLR8Float/extras/rtl/xlr8_float/xlr8_float_add1/dspba_library.vhd is missing
 Warning (12019): Can't analyze file -- file ../../../XLR8Servo/extras/rtl/xlr8_servo.v is missing
 Warning (12019): Can't analyze file -- file ../../../XLR8NeoPixel/extras/rtl/xlr8_neopixel.v is missing
 Warning (12019): Can't analyze file -- file ../../../XLR8Quadrature/extras/rtl/xlr8_quadrature.v is missing
 Warning (12019): Can't analyze file -- file ../../../XLR8PID/extras/rtl/xlr8_pid.v is missing
-Info (12021): Found 1 design units, including 1 entities, in source file /users/user/documents/arduino/libraries/xlr8build/extras/rtl/xlr8_lfsr.v
-    Info (12023): Found entity 1: xlr8_lfsr File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_lfsr.v Line: 15
+Warning (12019): Can't analyze file -- file ../rtl/xlr8_lfsr.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file my_rom.v
     Info (12023): Found entity 1: my_ROM File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/my_ROM.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at alorium_lfsr.v(80): created implicit net for "feedback" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 80
-Warning (10222): Verilog HDL Parameter Declaration warning at openxlr8.v(154): Parameter Declaration in module "openxlr8" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 154
+Warning (10236): Verilog HDL Implicit Net warning at alorium_esc.v(53): created implicit net for "feedback" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 53
+Warning (10222): Verilog HDL Parameter Declaration warning at openxlr8.v(159): Parameter Declaration in module "openxlr8" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 159
 Info (12127): Elaborating entity "xlr8_alorium_top" for the top level hierarchy
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_clocks.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_clocks File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_clocks.v Line: 18
-Info (12128): Elaborating entity "xlr8_clocks" for hierarchy "xlr8_clocks:clocks_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 386
+Info (12128): Elaborating entity "xlr8_clocks" for hierarchy "xlr8_clocks:clocks_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 388
 Warning (10230): Verilog HDL assignment warning at xlr8_clocks.v(215): truncated value with size 32 to match size of target (4) File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_clocks.v Line: 215
 Warning (10230): Verilog HDL assignment warning at xlr8_clocks.v(304): truncated value with size 32 to match size of target (6) File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_clocks.v Line: 304
 Warning (10034): Output port "clkx1" at xlr8_clocks.v(54) has no driver File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_clocks.v Line: 54
@@ -2467,10 +2405,10 @@ Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8c
 Info (12128): Elaborating entity "synch" for hierarchy "xlr8_clocks:clocks_inst|synch:lock_sync" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_clocks.v Line: 292
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_xb_pinmux.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_xb_pinmux File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_xb_pinmux.v Line: 17
-Info (12128): Elaborating entity "xlr8_xb_pinmux" for hierarchy "xlr8_xb_pinmux:xb_pinmux_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 466
+Info (12128): Elaborating entity "xlr8_xb_pinmux" for hierarchy "xlr8_xb_pinmux:xb_pinmux_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 468
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_irq.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_irq File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_irq.v Line: 27
-Info (12128): Elaborating entity "xlr8_irq" for hierarchy "xlr8_irq:xlr8_irq_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 504
+Info (12128): Elaborating entity "xlr8_irq" for hierarchy "xlr8_irq:xlr8_irq_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 506
 Warning (10036): Verilog HDL or VHDL warning at xlr8_irq.v(83): object "xack_re" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_irq.v Line: 83
 Warning (10230): Verilog HDL assignment warning at xlr8_irq.v(131): truncated value with size 8 to match size of target (2) File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_irq.v Line: 131
 Warning (10230): Verilog HDL assignment warning at xlr8_irq.v(133): truncated value with size 8 to match size of target (2) File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_irq.v Line: 133
@@ -2478,11 +2416,11 @@ Warning (10230): Verilog HDL assignment warning at xlr8_irq.v(134): truncated va
 Warning (10230): Verilog HDL assignment warning at xlr8_irq.v(135): truncated value with size 8 to match size of target (2) File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_irq.v Line: 135
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_iomux328.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_iomux328 File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 13
-Info (12128): Elaborating entity "xlr8_iomux328" for hierarchy "xlr8_iomux328:iomux328_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 594
+Info (12128): Elaborating entity "xlr8_iomux328" for hierarchy "xlr8_iomux328:iomux328_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 596
 Warning (10036): Verilog HDL or VHDL warning at xlr8_iomux328.v(418): object "_unused_ok" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 418
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_d_mem.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_d_mem File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_d_mem.v Line: 11
-Info (12128): Elaborating entity "xlr8_d_mem" for hierarchy "xlr8_d_mem:d_mem_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 611
+Info (12128): Elaborating entity "xlr8_d_mem" for hierarchy "xlr8_d_mem:d_mem_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 613
 Warning (10036): Verilog HDL or VHDL warning at xlr8_d_mem.v(100): object "_unused_ok" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_d_mem.v Line: 100
 Info (12128): Elaborating entity "altsyncram" for hierarchy "xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_d_mem.v Line: 94
 Info (12130): Elaborated megafunction instantiation "xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_d_mem.v Line: 94
@@ -2507,7 +2445,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_s4h1" for hierarchy "xlr8_d_mem:d_mem_inst|altsyncram:altsyncram_inst|altsyncram_s4h1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_p_mem.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_p_mem File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_p_mem.v Line: 10
-Info (12128): Elaborating entity "xlr8_p_mem" for hierarchy "xlr8_p_mem:p_mem_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 636
+Info (12128): Elaborating entity "xlr8_p_mem" for hierarchy "xlr8_p_mem:p_mem_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 638
 Warning (10036): Verilog HDL or VHDL warning at xlr8_p_mem.v(52): object "_unused_ok" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_p_mem.v Line: 52
 Warning (10036): Verilog HDL or VHDL warning at xlr8_p_mem.v(66): object "core_rd_addr" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_p_mem.v Line: 66
 Warning (10036): Verilog HDL or VHDL warning at xlr8_p_mem.v(67): object "rw_addr" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_p_mem.v Line: 67
@@ -2553,123 +2491,108 @@ Info (12128): Elaborating entity "decode_2j9" for hierarchy "xlr8_p_mem:p_mem_in
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_83b.tdf
     Info (12023): Found entity 1: mux_83b File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/mux_83b.tdf Line: 22
 Info (12128): Elaborating entity "mux_83b" for hierarchy "xlr8_p_mem:p_mem_inst|ram2p16384x16:ram16k.ram2p16384x16_inst|altsyncram:altsyncram_component|altsyncram_4hh2:auto_generated|mux_83b:mux4" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_4hh2.tdf Line: 52
-Info (12128): Elaborating entity "xlr8_atmega328clone" for hierarchy "xlr8_atmega328clone:uc_top_wrp_vlog_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 766
+Info (12128): Elaborating entity "xlr8_atmega328clone" for hierarchy "xlr8_atmega328clone:uc_top_wrp_vlog_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 768
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_gpio.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_gpio File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_gpio.v Line: 20
-Info (12128): Elaborating entity "xlr8_gpio" for hierarchy "xlr8_gpio:gpio_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 853
+Info (12128): Elaborating entity "xlr8_gpio" for hierarchy "xlr8_gpio:gpio_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 855
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/xlr8_portmux.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: xlr8_portmux File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 15
-Info (12128): Elaborating entity "xlr8_portmux" for hierarchy "xlr8_portmux:portmux_a_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 893
+Info (12128): Elaborating entity "xlr8_portmux" for hierarchy "xlr8_portmux:portmux_a_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 895
 Warning (12125): Using design file /users/user/documents/arduino/libraries/xlr8core/extras/rtl/avr_port.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: avr_port File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/avr_port.v Line: 15
-Info (12128): Elaborating entity "avr_port" for hierarchy "avr_port:pport_a_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 926
-Info (12128): Elaborating entity "avr_port" for hierarchy "avr_port:pport_e_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 991
-Info (12128): Elaborating entity "avr_port" for hierarchy "avr_port:pport_g_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 1056
-Info (12128): Elaborating entity "openxlr8" for hierarchy "openxlr8:xb_openxlr8_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 1640
-Warning (10030): Net "xbs_ddoe[0][37..14]" at openxlr8.v(165) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 165
-Warning (10030): Net "xbs_ddoe[0][10..3]" at openxlr8.v(165) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 165
-Warning (10030): Net "xbs_ddoe[0][1..0]" at openxlr8.v(165) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 165
-Warning (10030): Net "xbs_ddov[0][37..14]" at openxlr8.v(166) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 166
-Warning (10030): Net "xbs_ddov[0][10..3]" at openxlr8.v(166) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 166
-Warning (10030): Net "xbs_ddov[0][1..0]" at openxlr8.v(166) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 166
-Warning (10030): Net "xbs_pvoe[0][37..14]" at openxlr8.v(167) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 167
-Warning (10030): Net "xbs_pvoe[0][10..3]" at openxlr8.v(167) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 167
-Warning (10030): Net "xbs_pvoe[0][1..0]" at openxlr8.v(167) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 167
-Warning (10030): Net "xbs_pvov[0][37..14]" at openxlr8.v(168) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 168
-Warning (10030): Net "xbs_pvov[0][10..3]" at openxlr8.v(168) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 168
-Warning (10030): Net "xbs_pvov[0][1..0]" at openxlr8.v(168) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 168
-Info (12128): Elaborating entity "xlr8_lfsr" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 238
-Warning (10036): Verilog HDL or VHDL warning at xlr8_lfsr.v(69): object "data_we" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_lfsr.v Line: 69
-Info (12128): Elaborating entity "alorium_lfsr" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_lfsr.v Line: 136
-Warning (10858): Verilog HDL warning at alorium_lfsr.v(78): object pwm_compare used but never assigned File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 78
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(95): truncated value with size 32 to match size of target (30) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 95
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(99): truncated value with size 32 to match size of target (30) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 99
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(126): truncated value with size 32 to match size of target (3) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 126
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(137): truncated value with size 32 to match size of target (3) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 137
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(148): truncated value with size 32 to match size of target (3) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 148
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(159): truncated value with size 32 to match size of target (3) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 159
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(170): truncated value with size 32 to match size of target (3) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 170
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(198): truncated value with size 32 to match size of target (8) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 198
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(207): truncated value with size 32 to match size of target (4) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 207
-Warning (10230): Verilog HDL assignment warning at alorium_lfsr.v(255): truncated value with size 32 to match size of target (23) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 255
-Warning (10030): Net "pwm_compare" at alorium_lfsr.v(78) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 78
-Info (12128): Elaborating entity "debouncer" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|debouncer:f1" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 219
-Warning (10230): Verilog HDL assignment warning at debouncer.v(28): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/debouncer.v Line: 28
-Warning (10230): Verilog HDL assignment warning at debouncer.v(34): truncated value with size 32 to match size of target (1) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/debouncer.v Line: 34
-Warning (10230): Verilog HDL assignment warning at debouncer.v(39): truncated value with size 2 to match size of target (1) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/debouncer.v Line: 39
-Info (12128): Elaborating entity "my_ROM" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_lfsr.v Line: 271
-Info (12128): Elaborating entity "altsyncram" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/my_ROM.v Line: 81
-Info (12130): Elaborated megafunction instantiation "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/my_ROM.v Line: 81
-Info (12133): Instantiated megafunction "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/my_ROM.v Line: 81
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "ROM_init.mif"
-    Info (12134): Parameter "intended_device_family" = "MAX 10"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "8192"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
-    Info (12134): Parameter "widthad_a" = "13"
-    Info (12134): Parameter "width_a" = "22"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6u81.tdf
-    Info (12023): Found entity 1: altsyncram_6u81 File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_6u81" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[0]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 34
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[1]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 56
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[2]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 78
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[3]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 100
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[4]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 122
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[5]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 144
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[6]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 166
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[7]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 188
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[8]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 210
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[9]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 232
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[10]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 254
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[11]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 276
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[12]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 298
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[13]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 320
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[14]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 342
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[15]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 364
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[16]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 386
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[17]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 408
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[18]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 430
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[19]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 452
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[20]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 474
-        Warning (14320): Synthesized away node "openxlr8:xb_openxlr8_inst|xlr8_lfsr:lfsr_inst|alorium_lfsr:lfsr_inst|my_ROM:my_ROM_inst|altsyncram:altsyncram_component|altsyncram_6u81:auto_generated|q_a[21]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/altsyncram_6u81.tdf Line: 496
+Info (12128): Elaborating entity "avr_port" for hierarchy "avr_port:pport_a_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 928
+Info (12128): Elaborating entity "avr_port" for hierarchy "avr_port:pport_e_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 993
+Info (12128): Elaborating entity "avr_port" for hierarchy "avr_port:pport_g_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 1058
+Info (12128): Elaborating entity "openxlr8" for hierarchy "openxlr8:xb_openxlr8_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 1642
+Warning (10030): Net "xbs_ddoe[0][37]" at openxlr8.v(170) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 170
+Warning (10030): Net "xbs_ddoe[0][21..14]" at openxlr8.v(170) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 170
+Warning (10030): Net "xbs_ddoe[0][4..3]" at openxlr8.v(170) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 170
+Warning (10030): Net "xbs_ddoe[0][1..0]" at openxlr8.v(170) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 170
+Warning (10030): Net "xbs_ddov[0][37]" at openxlr8.v(171) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 171
+Warning (10030): Net "xbs_ddov[0][21..14]" at openxlr8.v(171) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 171
+Warning (10030): Net "xbs_ddov[0][4..3]" at openxlr8.v(171) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 171
+Warning (10030): Net "xbs_ddov[0][1..0]" at openxlr8.v(171) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 171
+Warning (10030): Net "xbs_pvoe[0][37]" at openxlr8.v(172) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 172
+Warning (10030): Net "xbs_pvoe[0][21..14]" at openxlr8.v(172) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 172
+Warning (10030): Net "xbs_pvoe[0][4..0]" at openxlr8.v(172) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 172
+Warning (10030): Net "xbs_pvov[0][37]" at openxlr8.v(173) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 173
+Warning (10030): Net "xbs_pvov[0][21..14]" at openxlr8.v(173) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 173
+Warning (10030): Net "xbs_pvov[0][7..3]" at openxlr8.v(173) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 173
+Warning (10030): Net "xbs_pvov[0][1..0]" at openxlr8.v(173) has no driver or initial value, using a default initial value '0' File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 173
+Info (12128): Elaborating entity "xlr8_esc" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/openxlr8.v Line: 249
+Warning (10036): Verilog HDL or VHDL warning at xlr8_esc.v(72): object "data_we" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_esc.v Line: 72
+Info (12128): Elaborating entity "alorium_esc" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/xlr8_esc.v Line: 141
+Warning (10036): Verilog HDL or VHDL warning at alorium_esc.v(53): object "feedback" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 53
+Warning (10036): Verilog HDL or VHDL warning at alorium_esc.v(47): object "sw_pwm" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 47
+Warning (10036): Verilog HDL or VHDL warning at alorium_esc.v(48): object "sw_val_rdy" assigned a value but never read File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 48
+Warning (10230): Verilog HDL assignment warning at alorium_esc.v(261): truncated value with size 32 to match size of target (8) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 261
+Warning (10230): Verilog HDL assignment warning at alorium_esc.v(273): truncated value with size 32 to match size of target (4) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 273
+Warning (10230): Verilog HDL assignment warning at alorium_esc.v(278): truncated value with size 32 to match size of target (14) File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 278
+Info (12128): Elaborating entity "debouncer" for hierarchy "openxlr8:xb_openxlr8_inst|xlr8_esc:esc_inst|alorium_esc:esc_inst|debouncer:f1" File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/rtl/alorium_esc.v Line: 295
 Warning (12240): Synthesis found one or more imported partitions that will be treated as black boxes for timing analysis during synthesis
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
-    Warning (13035): Inserted always-enabled tri-state buffer between "JT9" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 103
-    Warning (13035): Inserted always-enabled tri-state buffer between "JT6" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 105
-    Warning (13035): Inserted always-enabled tri-state buffer between "JT5" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 106
-    Warning (13035): Inserted always-enabled tri-state buffer between "JT1" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 108
+    Warning (13035): Inserted always-enabled tri-state buffer between "JT9" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 105
+    Warning (13035): Inserted always-enabled tri-state buffer between "JT6" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 107
+    Warning (13035): Inserted always-enabled tri-state buffer between "JT5" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 108
+    Warning (13035): Inserted always-enabled tri-state buffer between "JT1" and its non-tri-state driver. File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 110
 Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "RX" has no driver File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 79
+    Warning (13040): bidirectional pin "RX" has no driver File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 81
 Info (13060): One or more bidirectional pins are fed by always enabled tri-state buffers
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D13" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 76
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D12" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 76
-    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D11" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 76
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D13" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 78
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D12" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 78
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D11" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 78
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D10" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 78
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D9" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 78
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D8" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 78
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D24" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 82
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D25" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 82
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D26" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 82
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D27" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 82
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D28" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 83
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D29" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 83
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D30" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 83
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D31" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 83
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D32" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 83
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D33" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 83
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D34" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 84
+    Info (13061): Fan-out of permanently enabled tri-state buffer feeding bidirectional pin "D35" is moved to its source File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 84
 Warning (13008): TRI or OPNDRN buffers permanently disabled
+    Warning (13010): Node "xlr8_iomux328:iomux328_inst|portd_pads[7]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 21
+    Warning (13010): Node "xlr8_iomux328:iomux328_inst|portd_pads[6]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 21
+    Warning (13010): Node "xlr8_iomux328:iomux328_inst|portd_pads[5]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 21
     Warning (13010): Node "xlr8_iomux328:iomux328_inst|portd_pads[2]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 21
+    Warning (13010): Node "xlr8_portmux:portmux_g_inst|tpads[2]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_g_inst|tpads[3]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_g_inst|tpads[4]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "xlr8_iomux328:iomux328_inst|portb_pads[5]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 19
     Warning (13010): Node "xlr8_iomux328:iomux328_inst|portb_pads[4]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 19
     Warning (13010): Node "xlr8_iomux328:iomux328_inst|portb_pads[3]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 19
-    Warning (13010): Node "TX~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 79
-    Warning (13010): Node "JT9~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 103
-    Warning (13010): Node "JT7~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 104
-    Warning (13010): Node "JT6~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 105
-    Warning (13010): Node "JT5~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 106
-    Warning (13010): Node "JT3~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 107
-    Warning (13010): Node "JT1~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 108
+    Warning (13010): Node "xlr8_iomux328:iomux328_inst|portb_pads[2]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 19
+    Warning (13010): Node "xlr8_iomux328:iomux328_inst|portb_pads[1]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 19
+    Warning (13010): Node "xlr8_iomux328:iomux328_inst|portb_pads[0]~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_iomux328.v Line: 19
+    Warning (13010): Node "TX~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 81
+    Warning (13010): Node "xlr8_portmux:portmux_a_inst|tpads[2]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_a_inst|tpads[3]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_a_inst|tpads[4]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_a_inst|tpads[5]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_e_inst|tpads[0]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_e_inst|tpads[1]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_e_inst|tpads[2]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_e_inst|tpads[3]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_e_inst|tpads[4]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_e_inst|tpads[5]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_g_inst|tpads[0]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "xlr8_portmux:portmux_g_inst|tpads[1]" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_portmux.v Line: 39
+    Warning (13010): Node "JT9~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 105
+    Warning (13010): Node "JT7~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 106
+    Warning (13010): Node "JT6~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 107
+    Warning (13010): Node "JT5~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 108
+    Warning (13010): Node "JT3~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 109
+    Warning (13010): Node "JT1~synth" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/rtl/xlr8_alorium_top.v Line: 110
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 35 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/output_files/sno_16MHz.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -2679,20 +2602,20 @@ Info (35003): Optimize away 50 nodes that do not fanout to OUTPUT or BIDIR pins
     Info (35004): Node: "xlr8_atmega328clone:uc_top_wrp_vlog_inst|avr_usart:usart_inst|tx_en_current" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/quartus/sno_atmega328clone_16MHz.qxp Line: -1
     Info (35004): Node: "xlr8_atmega328clone:uc_top_wrp_vlog_inst|txd" File: C:/Users/User/Documents/Arduino/libraries/XLR8Core/extras/quartus/sno_atmega328clone_16MHz.qxp Line: -1
 Warning (15899): PLL "xlr8_clocks:clocks_inst|pll16:pll_inst|altpll:altpll_component|pll16_altpll:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected File: C:/Users/User/Documents/Arduino/libraries/XLR8Build/extras/quartus/db/pll16_altpll.v Line: 45
-Info (21057): Implemented 7778 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7766 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
     Info (21060): Implemented 60 bidirectional pins
-    Info (21061): Implemented 7635 logic cells
+    Info (21061): Implemented 7623 logic cells
     Info (21064): Implemented 68 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 4 DSP elements
     Info (21070): Implemented 1 User Flash Memory blocks
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Thu Jan 31 20:27:13 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Mon Apr 22 19:52:45 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
